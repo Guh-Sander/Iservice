@@ -1,0 +1,81 @@
+body {
+    background-color: #3D99BF;
+}
+
+#background {
+    background-color: #212859;
+    width: 305px;
+    height: 230px;
+    border-radius:  20px;
+    padding: 20px;
+    margin-left: 480px;
+    margin-top: 25px;
+}
+
+#home_screen {
+    border: 3px solid #3D99BF;
+    margin-top: 10px;
+}
+
+legend {
+    background-color: #3D99BF;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: bold;
+    padding: 10px;
+    width: 170px;
+    border: 2px;
+    position: relative;
+    left: 60px;
+    margin-top: -18px;
+
+}
+
+fieldset {
+    border: transparent;
+}
+
+label {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    text-decoration: underline;
+}
+
+input {
+    background-color: #212859;
+}
+
+input.text {
+    color: #fff;
+}
+
+.information2 {
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+#date_nas {
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+input#submit {
+    margin-bottom: 10px;
+    position: relative;
+    left: 25px;
+    color: #fff;
+    width: 250px;
+    height: 40px;
+    border-radius: 8px;
+    border-color: #212859;
+    background-image:url(../images_Iservice/background_blue_purple.jpg);
+}
+
+input#submit:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
