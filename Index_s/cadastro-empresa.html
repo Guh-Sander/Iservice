@@ -4,37 +4,42 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formúlario de Clientes</title>
-        <link rel="stylesheet" type="text/css" href="Forms_Clientes.css">
+        <title>Cadastro de Empresa</title>
+        <link rel="stylesheet" type="text/css" href="style-forms-impresa.css">
+        <link rel="icon" type="image/x-icon" href="../images_Iservice/Logo_Iservice.png">
     </head>
     <body>
         <div id="background">
             <form>
                 <div id="home_screen">
-                    <legend>Formulário de Clientes</legend>
+                    <legend>Cadastro de Empresa</legend>
                     <br>
                     <fieldset class="information">
-                        <label>Nome completo</label>
+                        <label>Nome da Empresa</label>
                         <input type="text" id="name">
                     </fieldset>
                     <fieldset class="contat">
                         <label>Email</label>
+                        <br>
                         <input type="email" id="email">
-                        <br><br>
+                        <br>
                         <label>Telefone</label>
+                        <br>
                         <input type="tel" id="telefone">
+                        <br>
+                        <label>CNPJ</label>
+                        <br>
+                        <input type="text" id="cnpj">
                     </fieldset>
                     <filedset class="information">
-                        <label>Sexo:</label>
-                            <br><br>
-                            <label><input type="radio" id="fem" name="sexo" value="f">Femenino</label>
-                            <br>
-                            <label><input type="radio" id="mas" name="sexo" value="m">Masculino</label>
-                            <br>
-                            <label><input type="radio" id="others" name="sexo" value="o">Outro</label>
+                        <br>
+                        <label>Ramo</label>
                         <br><br>
-                        <label>Data de Nascimento:</label>
-                        <input id="date_nas" type="date">
+                        <label><input type="radio" id="saude" name="ramo" value="f">Saúde</label>
+                            <br>
+                            <label><input type="radio" id="pet" name="ramo" value="m">Pet</label>
+                            <br>
+                            <label><input type="radio" id="veiculos" name="ramo" value="o">Veículos</label>
                         <br><br>
                     </filedset>
                     <fieldset class="localization">
