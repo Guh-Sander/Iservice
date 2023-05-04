@@ -19,8 +19,54 @@
                 <li class="category"><a href="Index_s/pag-saude.html"><img src="images/heart.svg"/> Saúde</a></li>
                 <li class="category"><a href="Index_s/pag-pet.html"><img src="images/pet.png" width="16px"/> Pet</a></li>
                 <li class="category"><a href="Index_s/pag-veiculos.html"><img src="images/car.svg"/> Veiculos</a></li>
-                <li class="category tools"><img src="images/lupa.png" width="18px"/> <input id="filtro" type="text" placeholder="Pesquise"></li>
-                <li class="category login"><a id="logar" href="Index_s/login.html.html"><img src="images/person.svg"/> Login/Cadastrar</a> </li>
+                <li class="category tools"><img src="images/lupa.png" width="18px"/> 
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><input type="text" id=></th>
+                            </tr>
+                        </thead>
+                        <tbory>
+                            <tr>
+                                <td><a href="Index_s/pag-saude.html">Saúde</a></td>
+                                <td><a href="Index_s/pag-saude.html">Saúde</a></td>
+                            </tr>
+                            <tr>
+                                <td href="Index_s/pag-pet.html">Pet</td>
+                                <td><a href="Index_s/anuncio-pet-pettopp.html">Anuncio Pet Topp</a></td>
+                            </tr>
+                            <tr>
+                                <td href="Index_s/pag-veiculos.html">Veiculos</td>
+                            </tr>
+                        </tbory>
+
+                    </table>
+
+                   <!--- <input id="searchbar" onkeyup="search_service()" type="text" name="search" placeholder="Pesquise serviços...">
+                    <ol id='list'>
+                        <li class="service">Saude</li>
+                        <li class="service">Pet</li>
+                        <li class="service">Veiculos</li>
+                    </ol>
+                    
+                    <script>
+                        function search_service() {
+                            let input = document.getElementById('searchbar').value
+                            input = input.toLowerCase();
+                            let x = document.getElementsByClassName('service');
+                            
+                            for (i = 0; i < x.length; i++) { 
+                                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                                    x[i].style.display="none";
+                                }
+                                else {
+                                    x[i].style.display="list-item";                 
+                                }
+                            }
+                        } -->
+                    </script>              
+                </li>
+                <li class="category login"><a id="logar" href="Index_s/login.html.html"><img src="images/person.svg"/> Login/Cadastrar</a></li>
             </ul>
         </div>
     </nav>
