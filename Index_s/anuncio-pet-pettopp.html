@@ -130,7 +130,6 @@
             position: absolute;
             left: 570px;
             top: 600px;
-
         }
        
     </style>
@@ -184,7 +183,6 @@
                 <input type="radio" id="radio5" name="estrela5" value="5" >
                 <br><br>
                 <input type="submit" >
-                <input type="reset">
             </div>
         </form>
     </div>
@@ -210,6 +208,7 @@
         });
         radio4.addEventListener("click", function() {
         if (radio4.checked) {
+            radio5.checked = false;
             radio3.checked = true;
             radio2.checked = true;
             radio1.checked = true;
@@ -217,12 +216,17 @@
         });
         radio3.addEventListener("click", function() {
         if (radio3.checked) {
+            radio5.checked = false;
+            radio4.checked = false;
             radio2.checked = true;
             radio1.checked = true;
         }
         });
         radio2.addEventListener("click", function() {
         if (radio2.checked) {
+            radio5.checked = false;
+            radio4.checked = false;
+            radio3.checked = false;
             radio1.checked = true;
         }
         });
