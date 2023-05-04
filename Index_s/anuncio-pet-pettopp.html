@@ -108,6 +108,30 @@
             padding-right: 300px;
             padding-bottom: 50px;  
         }
+        input[type="radio"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 50px;
+            height: 50px;
+            background-image: url('../images/estrelacinza.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            margin-right: 10px;
+        }
+        input[type="radio"]:checked {
+            background-image: url('../images/estrela.png');
+        }
+        div.star{
+            position: absolute;
+            left: 570px;
+            top: 600px;
+
+        }
        
     </style>
 </head>
@@ -140,6 +164,68 @@
         </table>
         <section class="ende"><h2 class="ende">Endereço:</h2> <br> <br> <p>Rua Alfredo Becker 470, Alcantara São Gonçalo</p></section>
         <label class="coment"> Deixe aqui seu comentário!  <br><input class="coment" type="text"></label>
+        
+        <form method="POST" action="" enctype="multipart/form-data">
+            <div class="star">
+
+                <label for="star1"></label>
+                <input type="radio" id="radio1" name="estrela1" value="1" >
+
+                <label for="star2"></label>
+                <input type="radio" id="radio2" name="estrela2" value="2" >
+
+                <label for="star3"></label>
+                <input type="radio" id="radio3" name="estrela3" value="3" >
+
+                <label for="star4"></label>
+                <input type="radio" id="radio4" name="estrela4" value="4" >
+
+                <label for="star5"></label>
+                <input type="radio" id="radio5" name="estrela5" value="5" >
+                <br><br>
+                <input type="submit" >
+                <input type="reset">
+            </div>
+        </form>
     </div>
+
+
+    
+
+    <script>
+
+        const radio1 = document.getElementById("radio1");
+        const radio2 = document.getElementById("radio2");
+        const radio3 = document.getElementById("radio3");
+        const radio4 = document.getElementById("radio4");
+        const radio5 = document.getElementById("radio5");
+
+        radio5.addEventListener("click", function() {
+        if (radio5.checked) {
+            radio4.checked = true;
+            radio3.checked = true;
+            radio2.checked = true;
+            radio1.checked = true;
+        }
+        });
+        radio4.addEventListener("click", function() {
+        if (radio4.checked) {
+            radio3.checked = true;
+            radio2.checked = true;
+            radio1.checked = true;
+        }
+        });
+        radio3.addEventListener("click", function() {
+        if (radio3.checked) {
+            radio2.checked = true;
+            radio1.checked = true;
+        }
+        });
+        radio2.addEventListener("click", function() {
+        if (radio2.checked) {
+            radio1.checked = true;
+        }
+        });
+    </script>
 </body>
 </html>
