@@ -187,9 +187,6 @@
         </form>
     </div>
 
-
-    
-
     <script>
 
         const radio1 = document.getElementById("radio1");
@@ -230,6 +227,14 @@
             radio1.checked = true;
         }
         });
+        radio1.addEventListener("click", function() {
+        if (radio1.checked) {
+            radio1.checked = true;
+            radio5.checked = false;
+            radio4.checked = false;
+            radio3.checked = false;
+            radio2.checked = false;
+        }});
     </script>
 </body>
 </html>
