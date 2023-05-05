@@ -5,38 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iservice</title>
-    <link rel="stylesheet" type="text/css" href="Index_s/style-pag-principal.css">
-    <link rel="icon" type="image/x-icon" href="images/logo_Iservice.png">
+    <link rel="stylesheet" type="text/css" href="../Index_s/style-pag-principal.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo_Iservice.png">
+    <style>
+        #divBusca{
+            background-color:#E0EEEE;
+            border:solid 2px #5F9EA0;
+            border-radius:10px;
+            width:294px;
+            height:25px;
+        }
+
+        #busca{
+            float: left;
+            background-color: transparent;
+            padding-left: 5px;
+            font-size: 18px;
+            border: transparent;
+            height: 25px;
+            width: 191px;
+        }
+
+        #busca:focus, input:focus {
+            box-shadow: 0 0 0 0;
+            outline: 0;
+        }
+
+        #btnBusca{
+            border:none;
+            float:left;
+            height:25px;
+            border-radius:0 7px 7px 0;
+            width:70px;
+            font-weight:bold;
+            background:#5F9EA0;
+        }
+
+        button#btnBusca:hover {
+            cursor: pointer;
+        }
+
+        #divBusca img{
+            padding: 3px 5px 2px 8px;
+            float: left;
+        }
+    </style>
+    <script>
+        
+    </script>
 </head>
 <body> 
     <nav>
         <div id="menu">      
             <ul>
                 <li class="logo">
-                    <img class="logo" src="images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice" width="80px"/>
+                    <img class="logo" src="../images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice" width="80px"/>
                 </li>
-                <li class="category"><a href="Index.html"><img src="images/house.svg"/> Início</a></li>
-                <li class="category"><a href="Index_s/pag-saude.html"><img src="images/heart.svg"/> Saúde</a></li>
-                <li class="category"><a href="Index_s/pag-pet.html"><img src="images/pet.png" width="16px"/> Pet</a></li>
-                <li class="category"><a href="Index_s/pag-veiculos.html"><img src="images/car.svg"/> Veiculos</a></li>
-                <li class="category tools"><img src="images/lupa.png" width="18px"/> 
-                    <table>
-                        <thead>
-                            <tr>
-                                <th><input type="text" id=></th>
-                            </tr>
-                        </thead>
+                <li class="category"><a href="Index.html"><img src="../images/house.svg"/> Início</a></li>
+                <li class="category"><a href="Index_s/pag-saude.html"><img src="../images/heart.svg"/> Saúde</a></li>
+                <li class="category"><a href="Index_s/pag-pet.html"><img src="../images/pet.png" width="16px"/> Pet</a></li>
+                <li class="category"><a href="Index_s/pag-veiculos.html"><img src="../images/car.svg"/> Veiculos</a></li>
+                <li class="category tools">
+                    <div id="divBusca">
+                        <img src="../images/lupa.png" width="20px" alt="Pesquisar..." title="Pequise"/>
+                        <input type="search" id="busca" placeholder="Pesquise serviços..."/>
+                        <button id="btnBusca">Buscar</button>
+                    </div>
+
+                    <table id="filtragem">
                         <tbory>
                             <tr>
-                                <td><a href="Index_s/pag-saude.html">Saúde</a></td>
+                                <td><a href="../Index_s/pag-saude.html">Saúde</a></td>
                                 
                             </tr>
                             <tr>
-                                <td href="Index_s/pag-pet.html">Pet</td>
-                                <td><a href="Index_s/anuncio-pet-pettopp.html">Anuncio Pet Topp</a></td>
+                                <td href="../Index_s/pag-pet.html">Pet</td>
+                                <td><a href="../Index_s/anuncio-pet-pettopp.html">Anuncio Pet Topp</a></td>
                             </tr>
                             <tr>
-                                <td href="Index_s/pag-veiculos.html">Veiculos</td>
+                                <td href="../Index_s/pag-veiculos.html">Veiculos</td>
                             </tr>
                         </tbory>
 
@@ -66,7 +113,7 @@
                         } -->
                     </script>              
                 </li>
-                <li class="category login"><a id="logar" href="Index_s/login.html.html"><img src="images/person.svg"/> Login/Cadastrar</a></li>
+                <li class="category login"><a id="logar" href="Index_s/login.html.html"><img src="../images/person.svg"/> Login/Cadastrar</a></li>
             </ul>
         </div>
     </nav>
@@ -77,7 +124,7 @@
             <li class="anuncio">    
                 <a href="Index_s/anuncio-pet-pettopp.html">    
                     <figure>
-                        <img src="images/anuncio_pet_1.jpeg" title="Pet shop" alt="Imagem do Pet shop banho e tosa para marcação de horário."/>
+                        <img src="../images/anuncio_pet_1.jpeg" title="Pet shop" alt="Imagem do Pet shop banho e tosa para marcação de horário."/>
                         <figcaption>Banho e tosa e acessórios NH</figcaption>
                     </figure>
                 </a>
@@ -85,7 +132,7 @@
             <li class="anuncio">
                 <a href="#">
                     <figure>
-                        <img src="images/anuncio_medico_1.jpg" title="Posto de saúde" alt="Imagem do Posto de saúde para marcação de consulta."/>
+                        <img src="../images/anuncio_medico_1.jpg" title="Posto de saúde" alt="Imagem do Posto de saúde para marcação de consulta."/>
                         <figcaption>Posto de saúde NH</figcaption>
                     </figure>
                 </a>
@@ -93,7 +140,7 @@
             <li class="anuncio">
                 <a href="#">
                     <figure>
-                        <img src="images/anuncio_veiculo_1.jpg" title="Consorcio de veiculos" alt="Imagem de consorcio de veiculos para pesquisa de carro novo."/>
+                        <img src="../images/anuncio_veiculo_1.jpg" title="Consorcio de veiculos" alt="Imagem de consorcio de veiculos para pesquisa de carro novo."/>
                         <figcaption>Consórcio do seu carro novo NH</figcaption>
                     </figure>
                 </a>
@@ -101,7 +148,7 @@
             <li class="anuncio">
                 <a href="#">
                     <figure>
-                        <img src="images/anuncio_petshop_2.jpg" title="Pet shop" alt="Imagem do Pet shop banho e tosa para marcação de horário"/>
+                        <img src="../images/anuncio_petshop_2.jpg" title="Pet shop" alt="Imagem do Pet shop banho e tosa para marcação de horário"/>
                         <figcaption>Pet shop banho e tosa NH</figcaption>
                     </figure>
                 </a>
