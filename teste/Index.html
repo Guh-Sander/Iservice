@@ -43,11 +43,33 @@
 
         button#btnBusca:hover {
             cursor: pointer;
+            color: #E0EEEE;
         }
 
         #divBusca img{
             padding: 3px 5px 2px 8px;
             float: left;
+        }
+
+        ol#listBusca {
+            list-style: none;
+        }
+
+        .categoryService {
+            background-color: #E0EEEE;
+            border: solid 2px #5F9EA0;
+            padding: 3px;
+            border-radius: 8px;
+            float: left;
+        }
+
+        a.categoryService:hover {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #listBusca {
+            display: none;
         }
     </style>
     <script>
@@ -64,14 +86,155 @@
                 <li class="category"><a href="Index.html"><img src="../images/house.svg"/> Início</a></li>
                 <li class="category"><a href="Index_s/pag-saude.html"><img src="../images/heart.svg"/> Saúde</a></li>
                 <li class="category"><a href="Index_s/pag-pet.html"><img src="../images/pet.png" width="16px"/> Pet</a></li>
-                <li class="category"><a href="Index_s/pag-veiculos.html"><img src="../images/car.svg"/> Veiculos</a></li>
+                <li class="category"><a href="Index_s/pag-veiculos.html"><img src="../images/car.svg"/> Veículos</a></li>
                 <li class="category tools">
                     <div id="divBusca">
                         <img src="../images/lupa.png" width="20px" alt="Pesquisar..." title="Pequise"/>
-                        <input type="search" id="busca" placeholder="Pesquise serviços..."/>
+                        <input onkeyup="search_service()" type="search" id="busca" name="search" placeholder="Pesquise serviços..." />
                         <button id="btnBusca">Buscar</button>
                     </div>
+                    <ol id='listBusca'>
+                        <li class="service"><a class="categoryService" href="../Index_s/pag-saude.html">Saúde</a></li>
+                        <li class="service"><a class="categoryService" href="../Index_s/pag-pet.html">Pet</a></li>
+                        <li class="service"><a class="categoryService" href="../Index_s/anuncio-pet-pettopp.html">Anuncio Pet Topp</a></li>
+                        <li class="service"><a class="categoryService" href="../Index_s/pag-veiculos.html">Veiculos</a></li>
+                    </ol>
+                    <script>
+                        function search_service() {
+                            let search = document.getElementById('busca').value.toLowerCase();
+                            let services = document.getElementsByClassName('service');
+                            let listBusca = document.getElementById('listBusca');
+                        
+                            for (let i = 0; i < services.length; i++) {
+                                let categoryService = services[i].querySelector('.categoryService');
+                                let serviceName = categoryService.textContent.toLowerCase();
+                        
+                                if (serviceName.includes(search)) {
+                                    services[i].style.display = 'list-item';
+                                } else {
+                                    services[i].style.display = 'none';
+                                }
+                            }
+                        
+                            listBusca.style.display = 'block';
+                        }
+                    
+                        let btnBusca = document.getElementById('btnBusca');
+                        btnBusca.addEventListener('click', function() {
+                            let search = document.getElementById('busca').value.toLowerCase();
+                            let services = document.getElementsByClassName('service');
+                        
+                            for (let i = 0; i < services.length; i++) {
+                                let categoryService = services[i].querySelector('.categoryService');
+                                let serviceName = categoryService.textContent.toLowerCase();
+                        
+                                if (serviceName.includes(search)) {
+                                    window.location.href = categoryService.getAttribute('href');
+                                    return;
+                                }
+                            }
+                        });
+                    </script>
 
+
+                 <!--   <script>
+                    function search_service() {
+                        let search = document.getElementById('busca').value.toLowerCase();
+                        let services = document.getElementsByClassName('service');
+                        let btnBusca = document.getElementById('btnBusca');
+                    
+                        for (let i = 0; i < services.length; i++) {
+                            let categoryService = services[i].querySelector('.categoryService');
+                            let serviceName = categoryService.textContent.toLowerCase();
+                    
+                            if (serviceName.includes(search)) {
+                                services[i].style.display = 'list-item';
+                            } else {
+                                services[i].style.display = 'none';
+                            }
+                        }
+                    
+                        btnBusca.addEventListener('click', function() {
+                            let selectedService = null;
+                    
+                            for (let i = 0; i < services.length; i++) {
+                                let categoryService = services[i].querySelector('.categoryService');
+                                let serviceName = categoryService.textContent.toLowerCase();
+                    
+                                if (serviceName.includes(search)) {
+                                    selectedService = categoryService.getAttribute('href');
+                                    break;
+                                }
+                            }
+                    
+                            if (selectedService) {
+                                window.location.href = selectedService;
+                            }
+                        });
+
+                        var input = document.getElementById('busca').value.toLowerCase();
+                        let categoryService = services[i].querySelector('.categoryService');
+                        let serviceName = categoryService.textContent.toLowerCase();
+
+                        input.addEventListener('click', function() {
+                            if(input == serviceName) {
+                                container.style.display = 'block';
+                            }
+                        })
+                    }
+                    </script> -->
+                <!--
+                    <div id="divBusca">
+                        <img src="../images/lupa.png" width="20px" alt="Pesquisar..." title="Pesquise"/>
+                        <input onkeyup="search_service()" type="search" id="busca" name="search" placeholder="Pesquise serviços..." />
+                        <button id="btnBusca">Buscar</button>
+                    </div>
+                    <ol id='listBusca'>
+                        <li class="service"><a class="categoryService" href="../Index_s/pag-saude.html">Saúde</a></li>
+                        <li class="service"><a class="categoryService" href="../Index_s/pag-pet.html">Pet</a></li>
+                        <li class="service"><a class="categoryService" href="../Index_s/anuncio-pet-pettopp.html">Anuncio Pet Topp</a></li>
+                        <li class="service"><a class="categoryService" href="../Index_s/pag-veiculos.html">Veículos</a></li>
+                    </ol>
+                    <script>
+                        function search_service() {
+                            let search = document.getElementById('busca').value.toLowerCase();
+                            let services = document.getElementsByClassName('service');
+                    
+                            for (let i = 0; i < services.length; i++) {
+                                let categoryService = services[i].querySelector('.categoryService');
+                                let serviceName = categoryService.textContent.toLowerCase();
+                    
+                                if (serviceName.includes(search)) {
+                                    services[i].style.display = 'list-item';
+                                } else {
+                                    services[i].style.display = 'none';
+                                }
+                            }
+                        }
+                    
+                        document.getElementById('btnBusca').addEventListener('click', function() {
+                            let services = document.getElementsByClassName('service');
+                    
+                            for (let i = 0; i < services.length; i++) {
+                                let categoryService = services[i].querySelector('.categoryService');
+                                let serviceName = categoryService.textContent.toLowerCase();
+                    
+                                if (serviceName == "saúde" || serviceName == "saude") {
+                                    window.location.href = '../Index_s/pag-saude.html';
+                                } else if (serviceName == "pet") {
+                                    window.location.href = '../Index_s/pag-pet.html';
+                                } else if (serviceName == "anuncio pet" || serviceName == "anuncio pet topp" || serviceName == "anúncio pet" || serviceName == "anúncio pet topp") {
+                                    window.location.href = '../Index_s/anuncio-pet-pettopp.html';
+                                } else if (serviceName == "veículos" || serviceName == "veiculos") {
+                                    window.location.href = '../Index_s/pag-veiculos.html';
+                                } else {
+                                    window.location.href = 'Index.html';
+                                }
+                            }
+                        });
+                    </script> -->
+
+                <!-- 
                     <table id="filtragem">
                         <tbory>
                             <tr>
@@ -86,8 +249,7 @@
                                 <td href="../Index_s/pag-veiculos.html">Veiculos</td>
                             </tr>
                         </tbory>
-
-                    </table>
+                    </table> -->
 
                    <!--- <input id="searchbar" onkeyup="search_service()" type="text" name="search" placeholder="Pesquise serviços...">
                     <ol id='list'>
@@ -110,8 +272,8 @@
                                     x[i].style.display="list-item";                 
                                 }
                             }
-                        } -->
-                    </script>              
+                        }
+                    </script>  -->            
                 </li>
                 <li class="category login"><a id="logar" href="Index_s/login.html.html"><img src="../images/person.svg"/> Login/Cadastrar</a></li>
             </ul>

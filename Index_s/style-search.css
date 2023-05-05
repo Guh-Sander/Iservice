@@ -1,0 +1,67 @@
+#divBusca{
+    background-color:#E0EEEE;
+    border:solid 2px #5F9EA0;
+    border-radius:10px;
+    width:294px;
+    height:25px;
+}
+
+#busca{
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    border: transparent;
+    height: 25px;
+    width: 191px;
+}
+
+#busca:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+#btnBusca{
+    border:none;
+    float:left;
+    height:25px;
+    border-radius:0 7px 7px 0;
+    width:70px;
+    font-weight:bold;
+    background:#5F9EA0;
+}
+
+button#btnBusca:hover {
+    cursor: pointer;
+    color: #E0EEEE;
+}
+
+#divBusca img{
+    padding: 3px 5px 2px 8px;
+    float: left;
+}
+
+ol#listBusca {
+    list-style: none;
+}
+
+.categoryService {
+    background-color: #E0EEEE;
+    border: solid 2px #5F9EA0;
+    padding: 3px;
+    border-radius: 8px;
+    float: left;
+}
+
+a.categoryService:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#listBusca {
+    display: none;
+}
+
+.escondeName {
+    display: none;
+}
