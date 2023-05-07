@@ -1,3 +1,13 @@
+#goBack {
+    position: absolute;
+    margin-top: -18px;
+    margin-left: -18px;
+}
+
+#goBack:hover {
+    cursor: grab;
+}
+
 #background {
     background-color: #B9E7EF;
     width: 305px;
@@ -90,4 +100,9 @@ a {
     border-radius: 10px;
     padding: 4px;
     font-weight: bold;
+}
+
+a:hover {
+    color: #A42FC2;
+    border-color: #A42FC2;
 }

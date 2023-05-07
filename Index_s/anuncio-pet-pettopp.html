@@ -131,12 +131,16 @@
             left: 570px;
             top: 600px;
         }
-       
     </style>
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+    </script>
 </head>
 <body>
     <div class="janela">
-        <div class="teto"><a href="../Index.html"><img src="../images/arrow.svg" title="Voltar" alt="Voltar" style="position:absolute; top: -207px; left: -200px; scale: 9%;"/></a></div>
+        <div class="teto"><img onclick="goBack()" src="../images/arrow.svg" title="Voltar" alt="Voltar" style="position:absolute; top: -207px; left: -200px; scale: 9%;"/></div>
         <figure>
             <img id="agenda" src="../images/banhoetosa.jpg" alt="Anúncio da empresa" title="Pet Toop">
         </figure>

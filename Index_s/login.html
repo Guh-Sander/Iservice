@@ -7,9 +7,15 @@
         <title>Login</title>
         <link rel="stylesheet" type="text/css" href="style-forms-clientes.css">
         <link rel="icon" type="image/x-icon" href="../images/Logo_Iservice.png">
+        <script>
+            function goBack() {
+                window.history.back()
+            }
+        </script>
     </head>
     <body>
         <div id="background">
+            <img id="goBack" onclick="goBack()" src="../images/arrow.svg" width="30px" title="Voltar" alt="Voltar"/>
             <form>   
                 <div id="home_screen">
                     <legend>Login</legend>
