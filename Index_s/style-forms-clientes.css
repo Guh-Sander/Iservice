@@ -1,11 +1,8 @@
-body {
-    background-color: #3D99BF;
-}
-
 #background {
-    background-color: #212859;
+    background-color: #B9E7EF;
     width: 305px;
-    height: 230px;
+    height: 300px;
+    border: solid 2px #2DA6A4;
     border-radius:  20px;
     padding: 20px;
     margin-left: 480px;
@@ -13,25 +10,25 @@ body {
 }
 
 #home_screen {
-    border: 3px solid #3D99BF;
+    border: 3px solid #2DA6A4;
     margin-top: 10px;
+    background-color: #E0EEEE;
 }
 
 legend {
-    background-color: #3D99BF;
-    color: #fff;
+    background-color: #fff;
+    color: #2DA6A4;
+    font-size: x-large;
     border-radius: 10px;
+    border: solid 3px #2DA6A4;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
     font-weight: bold;
-    padding: 10px;
+    padding: 5px;
     width: 170px;
-    border: 2px;
     position: relative;
-    left: 60px;
+    left: 55px;
     margin-top: -18px;
-
 }
 
 fieldset {
@@ -39,43 +36,58 @@ fieldset {
 }
 
 label {
-    color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
-    text-decoration: underline;
+    color:#2DA6A4;
+    font-weight: bold;
 }
 
 input {
-    background-color: #212859;
+    background-color: #fff;
+    border: groove;
+    border-radius: 8px;
 }
 
 input.text {
-    color: #fff;
+    color: #000;
 }
 
-.information2 {
-    padding-left: 15px;
-    text-decoration: none;
-}
-
-#date_nas {
-    background-color: #fff;
-    border-radius: 8px;
+input:focus { /* Retira a borda ao clicar na caixa do input */
+    box-shadow: 0 0 0 0;
+    outline: 0;
 }
 
 input#submit {
     margin-bottom: 10px;
     position: relative;
-    left: 25px;
     color: #fff;
     width: 250px;
     height: 40px;
     border-radius: 8px;
-    border-color: #212859;
-    background-image:url(../images_Iservice/background_blue_purple.jpg);
+    border-color: #2DA6A4;
+    background-color: #2DA6A4;
+    left: 10px;
 }
 
 input#submit:hover {
     cursor: pointer;
+    font-weight: bold;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 300px;
+    font-size: small;
+    color: #555;
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: #2DA6A4;
+    background-color: #fff;
+    border: solid 2px #2DA6A4;
+    border-radius: 10px;
+    padding: 4px;
     font-weight: bold;
 }

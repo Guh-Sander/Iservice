@@ -6,24 +6,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
         <link rel="stylesheet" type="text/css" href="style-forms-clientes.css">
-        <link rel="icon" type="image/x-icon" href="../images_Iservice/Logo_Iservice.png">
+        <link rel="icon" type="image/x-icon" href="../images/Logo_Iservice.png">
     </head>
     <body>
         <div id="background">
             <form>   
                 <div id="home_screen">
-                    <legend >Login</legend>
+                    <legend>Login</legend>
                     <br>
                     <fieldset class="contat">
-                        <label>Email ou Telefone</label>
-                        <input class="text" type="email" id="email">
+                        <label>Email:<br>
+                            <input class="text" type="email" id="email" placeholder="contato@gmail.com">
+                        </label>
                         <br><br>
-                        <label>Senha<br></label>
-                        <input class="text" type="password" id="senha">
+                        <label>Senha:<br>
+                            <input class="text" type="password" id="senha" placeholder="1234">
+                        </label>
                         <br><br>
                         <input id="submit" type="submit">
-                    </fieldset>
+                    </fieldset> 
                 </div>
+                    <fieldset>
+                        <p>Ainda não tem conta?
+                            <a href="cadastro-cliente.html">Cadastre-se como cliente</a>
+                            <br><br>
+                            <a href="cadastro-empresa.html">Cadastre-se como Empresa</a>
+                        </p>
+                    </fieldset>
             </form>
         </div>
     </body>
