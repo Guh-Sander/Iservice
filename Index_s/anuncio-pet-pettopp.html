@@ -126,10 +126,19 @@
         input[type="radio"]:checked {
             background-image: url('../images/estrela.png');
         }
+
+        input:hover {
+            cursor: pointer;
+        }
+
         div.star{
             position: absolute;
             left: 570px;
             top: 600px;
+        }
+
+        #goBack:hover {
+            cursor: grab;
         }
     </style>
     <script>
@@ -140,7 +149,7 @@
 </head>
 <body>
     <div class="janela">
-        <div class="teto"><img onclick="goBack()" src="../images/arrow.svg" title="Voltar" alt="Voltar" style="position:absolute; top: -207px; left: -200px; scale: 9%;"/></div>
+        <div class="teto"><img id="goBack" onclick="goBack()" src="../images/arrow.svg" title="Voltar" alt="Voltar" style="position:absolute; top: -207px; left: -200px; scale: 9%;"/></div>
         <figure>
             <img id="agenda" src="../images/banhoetosa.jpg" alt="Anúncio da empresa" title="Pet Toop">
         </figure>
@@ -167,10 +176,8 @@
         </table>
         <section class="ende"><h2 class="ende">Endereço:</h2> <br> <br> <p>Rua Alfredo Becker 470, Alcantara São Gonçalo</p></section>
         <label class="coment"> Deixe aqui seu comentário!  <br><input class="coment" type="text"></label>
-        
         <form method="POST" action="" enctype="multipart/form-data">
             <div class="star">
-
                 <label for="star1"></label>
                 <input type="radio" id="radio1" name="estrela1" value="1" >
 
@@ -190,9 +197,7 @@
             </div>
         </form>
     </div>
-
     <script>
-
         const radio1 = document.getElementById("radio1");
         const radio2 = document.getElementById("radio2");
         const radio3 = document.getElementById("radio3");
