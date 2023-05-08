@@ -140,6 +140,7 @@ li.service a.categoryService:hover {
 
 #listBusca { /* Esconde a lista usada para filtrar as páginas pesquisadas */
     display: none;
+    position: absolute;
 }
 
 .escondeName { /* Esconde a segunda opção de nome com acentuação */
