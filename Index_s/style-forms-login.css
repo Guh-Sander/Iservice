@@ -1,7 +1,7 @@
 #goBack {
     position: absolute;
-    margin-top: -18px;
-    margin-left: -18px;
+    margin-top: -10px;
+    margin-left: -10px;
 }
 
 #goBack:hover {
@@ -11,7 +11,7 @@
 #background {
     background-color: #B9E7EF;
     width: 305px;
-    height: 300px;
+    height: 320px;
     border: solid 2px #2DA6A4;
     border-radius:  20px;
     padding: 20px;
@@ -21,7 +21,7 @@
 
 #home_screen {
     border: 3px solid #2DA6A4;
-    margin-top: 10px;
+    margin-top: 25px;
     background-color: #E0EEEE;
 }
 
