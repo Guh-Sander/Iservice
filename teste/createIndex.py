@@ -1,10 +1,12 @@
+pag = open("index.html","w")
+pag.write('''
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anúncio - Pet Topp</title>
+    <title>Iservice</title>
     <link rel="icon" type="image/x-icon" href="../images/Logo_Iservice.png">
     <style>
         body{
@@ -142,103 +144,5 @@
     <div class="janela">
         <div class="teto"><img onclick="goBack()" src="../images/arrow.svg" title="Voltar" alt="Voltar" style="position:absolute; top: -207px; left: -200px; scale: 9%;"/></div>
         <figure>
-            <img id="agenda" src="../images/banhoetosa.jpg" alt="Anúncio da empresa" title="Pet Toop">
-        </figure>
-        <h1>PetTopp: Banho e Tosa</h1>
-        <table>
-            <Caption><a name="tabela de preços da empresa"> Tabela de preços:</a></Caption>
-            <tr>
-                <td>Banho(P/M porte):</td>
-                <td>$$$$$</td>
-            </tr>
-            <tr>
-                <td>Banho(G porte):</td>
-                <td>$$$$$</td>
-            </tr>
-            <tr>
-                <td>Tosa(P/M porte):</td>
-                <td>$$$$$</td>
-            </tr>
-            <tr>
-                <td>Tosa(G porte):</td>
-                <td>$$$$$</td>
-            </tr>
-            <label class="botao"><a id="agenda" href="calendario-pettopp.html" target="_blank">Agendar</a></label>
-        </table>
-        <section class="ende"><h2 class="ende">Endereço:</h2> <br> <br> <p>Rua Alfredo Becker 470, Alcantara São Gonçalo</p></section>
-        <label class="coment"> Deixe aqui seu comentário!  <br><input class="coment" type="text"></label>
-        
-        <form method="POST" action="" enctype="multipart/form-data">
-            <div class="star">
-
-                <label for="star1"></label>
-                <input type="radio" id="radio1" name="estrela1" value="1" >
-
-                <label for="star2"></label>
-                <input type="radio" id="radio2" name="estrela2" value="2" >
-
-                <label for="star3"></label>
-                <input type="radio" id="radio3" name="estrela3" value="3" >
-
-                <label for="star4"></label>
-                <input type="radio" id="radio4" name="estrela4" value="4" >
-
-                <label for="star5"></label>
-                <input type="radio" id="radio5" name="estrela5" value="5" >
-                <br><br>
-                <input type="submit" >
-            </div>
-        </form>
-    </div>
-
-    <script>
-
-        const radio1 = document.getElementById("radio1");
-        const radio2 = document.getElementById("radio2");
-        const radio3 = document.getElementById("radio3");
-        const radio4 = document.getElementById("radio4");
-        const radio5 = document.getElementById("radio5");
-
-        radio5.addEventListener("click", function() {
-        if (radio5.checked) {
-            radio4.checked = true;
-            radio3.checked = true;
-            radio2.checked = true;
-            radio1.checked = true;
-        }
-        });
-        radio4.addEventListener("click", function() {
-        if (radio4.checked) {
-            radio5.checked = false;
-            radio3.checked = true;
-            radio2.checked = true;
-            radio1.checked = true;
-        }
-        });
-        radio3.addEventListener("click", function() {
-        if (radio3.checked) {
-            radio5.checked = false;
-            radio4.checked = false;
-            radio2.checked = true;
-            radio1.checked = true;
-        }
-        });
-        radio2.addEventListener("click", function() {
-        if (radio2.checked) {
-            radio5.checked = false;
-            radio4.checked = false;
-            radio3.checked = false;
-            radio1.checked = true;
-        }
-        });
-        radio1.addEventListener("click", function() {
-        if (radio1.checked) {
-            radio1.checked = true;
-            radio5.checked = false;
-            radio4.checked = false;
-            radio3.checked = false;
-            radio2.checked = false;
-        }});
-    </script>
-</body>
-</html>
+            <img id="agenda" src="
+''')
