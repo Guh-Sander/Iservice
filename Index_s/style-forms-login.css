@@ -75,13 +75,16 @@ input#submit {
     height: 40px;
     border-radius: 8px;
     border-color: #2DA6A4;
+    font-weight: bold;
+    
     background-color: #2DA6A4;
     left: 10px;
 }
 
 input#submit:hover {
     cursor: pointer;
-    font-weight: bold;
+    border-color: #000;
+    font-weight: lighter;
 }
 
 p {

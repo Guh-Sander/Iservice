@@ -79,6 +79,7 @@ input#submit {
     color: #fff;
     width: 250px;
     height: 40px;
+    font-weight: bold;
     border-radius: 8px;
     border-color: #2DA6A4;
     background-color: #2DA6A4;
@@ -87,5 +88,6 @@ input#submit {
 
 input#submit:hover {
     cursor: pointer;
-    font-weight: bold;
+    border-color: #000;
+    font-weight: lighter;
 }

@@ -17,8 +17,7 @@ function search_service() {
     listBusca.style.display = 'block';
 }
 
-let btnBusca = document.getElementById('btnBusca');
-btnBusca.addEventListener('click', function() {
+function busca() {
     let search = document.getElementById('busca').value.toLowerCase();
     let services = document.getElementsByClassName('service');
 
@@ -31,4 +30,21 @@ btnBusca.addEventListener('click', function() {
             return;
         }
     }
+}
+
+let button = document.getElementById('btnBusca');
+let input = document.getElementById('busca');
+
+// Adiciona um evento de keydown ao input
+input.addEventListener('keydown', function(event) {
+    // Verifica se a tecla pressionada foi a tecla Enter
+    if (event.keyCode === 13) {
+        event.preventDefault(); // Previne o comportamento padrão do Enter (submit do formulário)
+        busca(); // Realiza a busca e vai para a página HTML correspondente
+    }
+});
+
+// Adiciona um evento de click ao botão
+button.addEventListener('click', function() {
+    busca(); // Realiza a busca e vai para a página HTML correspondente
 });
