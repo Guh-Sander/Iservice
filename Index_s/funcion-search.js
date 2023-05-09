@@ -7,15 +7,19 @@ function search_service() {
         let categoryService = services[i].querySelector('.categoryService');
         let serviceName = categoryService.textContent.toLowerCase();
 
-        if (serviceName.includes(search)) {
+        // Se não tiver nada pesquisado pelo usuário não aparece os campos de sugestão
+        if (search.length > 1) {
+            // Verifica se os serviços disponíveis, páginas HTML, condizem com o que está sendo pesquisado
+            if (serviceName.includes(search)) {
             services[i].style.display = 'list-item';
+        }  
         } else {
             services[i].style.display = 'none';
         }
     }
-
     listBusca.style.display = 'block';
 }
+
 
 function busca() {
     let search = document.getElementById('busca').value.toLowerCase();
