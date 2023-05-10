@@ -65,10 +65,9 @@ a.contatDev {
     font-size: small;
     font-weight: bold;
     margin: 5px;
-    text-shadow: #555 0.1em 0.1em;
 }
 
 a.contatDev:hover {
     border-width: 1px;
-    text-shadow: none;
+    text-shadow: #555 0.1em 0.1em;
 }

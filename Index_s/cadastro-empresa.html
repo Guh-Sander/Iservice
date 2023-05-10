@@ -14,7 +14,7 @@
         </script>
     </head>
     <body>
-        <div id="background" style="height: 800px;">
+        <div id="background" style="height: 850px;">
             <img id="goBack" onclick="goBack()" src="../images/arrow.svg" width="30px" title="Voltar" alt="Voltar"/>
             <form>
                 <div id="home_screen">
@@ -38,23 +38,26 @@
                             <input type="text" id="cnpj" placeholder="XX.XXX.XXX/XXXX-XX">
                         </label>
                         <br><br>
+                        <label>Senha:<br>
+                            <input type="password" id="senha" placeholder="1234">
+                        </label>
+                        <br><br>
                         <label>Anúncio da Empresa: <br>
                             <input type="file" id="anuncio">
                         </label>
                         <br><br>
-                        <label>Senha:<br>
-                            <input class="text" type="password" id="senha" placeholder="1234">
+                        <label>Descrição/Informações do serviço: <br>
+                            <input type="text" id="informationService" placeholder="Tabelas de preços e descrição">
                         </label>
                     </fieldset>
                     <filedset class="information">
-                        <br>
                         <label class="information2">Setor:</label>
                             <br>
-                            <label><input type="radio" id="saude" name="ramo" value="s">Saúde</label>
+                            <label><input class="radio" type="radio" id="saude" name="ramo" value="s">Saúde</label>
                             <br>
-                            <label><input type="radio" id="pet" name="ramo" value="p">Pet</label>
+                            <label><input class="radio" type="radio" id="pet" name="ramo" value="p">Pet</label>
                             <br>
-                            <label><input type="radio" id="veiculos" name="ramo" value="v">Veículos</label>
+                            <label><input class="radio" type="radio" id="veiculos" name="ramo" value="v">Veículos</label>
                         <br><br>
                     </filedset>
                     <fieldset class="localization">

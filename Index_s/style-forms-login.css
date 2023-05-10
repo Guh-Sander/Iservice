@@ -45,6 +45,10 @@ fieldset {
     border: transparent;
 }
 
+fieldset#cadastro {
+    padding: 5px;
+}
+
 label {
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
@@ -98,16 +102,16 @@ p {
 
 a {
     text-decoration: none;
-    color: #2DA6A4;
-    background-color: #fff;
-    border: solid 2px #000;
+    color: #fff;
+    background-color: #A42FC2;
+    border: solid 2px #A42FC2;
     border-radius: 10px;
     padding: 4px;
     font-weight: bold;
 }
 
 a:hover {
-    color: #A42FC2;
-    border-color: #A42FC2;
+    color: #fff;
+    border: #000 solid 1px;
     text-transform: lowercase;
 }
