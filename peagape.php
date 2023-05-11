@@ -1,28 +1,15 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', 'senha', 'nome_do_banco');
+$conn = mysqli_connect('localhost', 'root', 'ienh', 'mydb');
 if (!$conn) {
-    die('Não foi possível conectar ao banco de dados: ' . mysqli_connect_error());
+    die('Could not connect: ');
 }
 
-$nome_empresa = $_POST['nome_empresa'];
-$email = $_POST['email'];
-$telefone = $_POST['telefone'];
-$cnpj = $_POST['cnpj'];
-$ramo = $_POST['ramo'];
-$cidade = $_POST['cidade'];
-$estado = $_POST['estado'];
-$endereco = $_POST['endereco'];
+$sql = 'INSERT INTO cliente_empresa(nome, email, telefone, cnpj, senha, ramo, cidade, estado, endereço) values("' . $_POST["name"] . '","' . $_POST["email"] . '","' . $_POST["telefone"] . '","' . $_POST["cnpj"] . '","' . $_POST["senha"] . '","' . $_POST["ramo"] . '")';
 
-$stmt = mysqli_prepare($conn, "INSERT INTO empresas (nome_empresa, email, telefone, cnpj, ramo, cidade, estado, endereco) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-
-mysqli_stmt_bind_param($stmt, "ssssssss", $nome_empresa, $email, $telefone, $cnpj, $ramo, $cidade, $estado, $endereco);
-
-if (mysqli_stmt_execute($stmt)) {
-    echo "Registro criado com sucesso!";
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
 } else {
-    echo "Erro ao criar registro: " . mysqli_error($conn);
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-mysqli_stmt_close($stmt);
-mysqli_close($conn);
 ?>
