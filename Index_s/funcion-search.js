@@ -22,15 +22,21 @@ function search_service() {
 
 
 function busca() {
-    let search = document.getElementById('busca').value.toLowerCase();
+    let search = 0;
+    search = document.getElementById('busca').value.toLowerCase();
     let services = document.getElementsByClassName('service');
 
     for (let i = 0; i < services.length; i++) {
         let categoryService = services[i].querySelector('.categoryService');
         let serviceName = categoryService.textContent.toLowerCase();
 
-        if (serviceName.includes(search)) {
-            window.location.href = categoryService.getAttribute('href');
+        // Define que se o valor da pesquisa do filtro for igual a zero não buscará a lista com o href corretamente
+        if (search != 0) {
+            if (serviceName.includes(search)) {
+                window.location.href = categoryService.getAttribute('href');
+                return;
+            }
+        } else {
             return;
         }
     }
