@@ -16,7 +16,7 @@
     <body>
         <div id="background" style="height: 850px;">
             <img id="goBack" onclick="goBack()" src="../images/arrow.svg" width="30px" title="Voltar" alt="Voltar"/>
-            <form method="post" action="../peagape.php">
+            <form method="post" action="../peagape.php" class="$row">
                 <div id="home_screen">
                     <legend>Cadastro de Empresa</legend>
                     <br>
@@ -53,11 +53,11 @@
                     <filedset class="information">
                         <label id="ramo" class="information2" id>Setor:</label>
                             <br>
-                            <label for="saude"><input class="radio" type="radio" id="saude" name="ramo" value="S">Saúde</label>
+                            <label for="saude"><input class="radio" type="radio" id="saude" name="ramo" value="S" <?= ($row['ramo'] == 'classe_saude') ? 'checked' : '' ?>>Saúde</label>
                             <br>
-                            <label for="pet"><input class="radio" type="radio" id="pet" name="ramo" value="P">Pet</label>
+                            <label for="pet"><input class="radio" type="radio" id="pet" name="ramo" value="P" <?= ($row['ramo'] == 'classe_pet') ? 'checked' : '' ?> />Pet</label>
                             <br>
-                            <label for="veiculos"><input class="radio" type="radio" id="veiculos" name="ramo" value="V">Veículos</label>
+                            <label for="veiculos"><input class="radio" type="radio" id="veiculos" name="ramo" value="V" <?= ($row['ramo'] == 'classe_veiculos') ? 'checked' : '' ?>>Veículos</label>
                         <br><br>
                     </filedset>
                     <fieldset class="localization">
