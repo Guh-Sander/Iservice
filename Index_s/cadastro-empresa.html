@@ -16,7 +16,7 @@
     <body>
         <div id="background" style="height: 850px;">
             <img id="goBack" onclick="goBack()" src="../images/arrow.svg" width="30px" title="Voltar" alt="Voltar"/>
-            <form>
+            <form method="post" action="../peagape.php">
                 <div id="home_screen">
                     <legend>Cadastro de Empresa</legend>
                     <br>
@@ -31,7 +31,7 @@
                         </label>
                         <br><br>
                         <label>Telefone: <br>
-                            <input type="tel" id="telefone" placeholder="55519XXXXXXXX">
+                            <input type="tel" id="tel" placeholder="55519XXXXXXXX">
                         </label>
                         <br><br>
                         <label>CNPJ: <br>
@@ -39,7 +39,7 @@
                         </label>
                         <br><br>
                         <label>Senha:<br>
-                            <input type="password" id="senha" placeholder="1234">
+                            <input type="password" id="password placeholder="1234">
                         </label>
                         <br><br>
                         <label>Anúncio da Empresa: <br>
@@ -51,26 +51,26 @@
                         </label>
                     </fieldset>
                     <filedset class="information">
-                        <label class="information2">Setor:</label>
+                        <label id="ramo" class="information2" id>Setor:</label>
                             <br>
-                            <label><input class="radio" type="radio" id="saude" name="ramo" value="s">Saúde</label>
+                            <label for="saude"><input class="radio" type="radio" id="saude" name="ramo" value="S">Saúde</label>
                             <br>
-                            <label><input class="radio" type="radio" id="pet" name="ramo" value="p">Pet</label>
+                            <label for="pet"><input class="radio" type="radio" id="pet" name="ramo" value="P">Pet</label>
                             <br>
-                            <label><input class="radio" type="radio" id="veiculos" name="ramo" value="v">Veículos</label>
+                            <label for="veiculos"><input class="radio" type="radio" id="veiculos" name="ramo" value="V">Veículos</label>
                         <br><br>
                     </filedset>
                     <fieldset class="localization">
                         <label>Cidade: <br>
-                            <input type="text" id="city" placeholder="Novo Hamburgo">
+                            <input type="text" id="cidade" placeholder="Novo Hamburgo">
                         </label>
                         <br><br>
                         <label>Estado: <br>
-                            <input type="text" id="state" placeholder="Rio Grande do Sul">
+                            <input type="text" id="estado" placeholder="Rio Grande do Sul">
                         </label>
                         <br><br>
                         <label>Endereço: <br>
-                            <input type="text" id="addres" placeholder="Bairro: XX, Rua: XX, nº: XX">
+                            <input type="text" id="endereco" placeholder="Bairro: XX, Rua: XX, nº: XX">
                         </label>
                         <br><br>
                     </fieldset>
