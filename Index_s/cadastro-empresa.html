@@ -22,55 +22,55 @@
                     <br>
                     <fieldset class="information">
                         <label>Nome da Empresa: <br>
-                            <input type="text" id="name" placeholder="Iservice">
+                            <input type="text" id="name" name="name" placeholder="Iservice">
                         </label>
                     </fieldset>
                     <fieldset class="contat">
                         <label>Email: <br>
-                            <input type="email" id="email" placeholder="contato@gmail.com.br"">
+                            <input type="email" id="email" name="email" placeholder="contato@gmail.com.br"">
                         </label>
                         <br><br>
                         <label>Telefone: <br>
-                            <input type="tel" id="tel" placeholder="55519XXXXXXXX">
+                            <input type="tel" id="tel" name="tel" placeholder="55519XXXXXXXX">
                         </label>
                         <br><br>
                         <label>CNPJ: <br>
-                            <input type="text" id="cnpj" placeholder="XX.XXX.XXX/XXXX-XX">
+                            <input type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/XXXX-XX">
                         </label>
                         <br><br>
                         <label>Senha:<br>
-                            <input type="password" id="password placeholder="1234">
+                            <input type="password" name="password" id="password" placeholder="1234">
                         </label>
                         <br><br>
                         <label>Anúncio da Empresa: <br>
-                            <input type="file" id="anuncio">
+                            <input type="file" name="imagem" id="anuncio">
                         </label>
                         <br><br>
                         <label>Descrição/Informações do serviço: <br>
-                            <input type="text" id="informationService" placeholder="Tabelas de preços e descrição">
+                            <input type="text" name="informacao" id="informationService" placeholder="Tabelas de preços e descrição">
                         </label>
                     </fieldset>
                     <filedset class="information">
                         <label id="ramo" class="information2" id>Setor:</label>
                             <br>
-                            <label for="saude"><input class="radio" type="radio" id="saude" name="ramo" value="S" <?= ($row['ramo'] == 'classe_saude') ? 'checked' : '' ?>>Saúde</label>
+                            <label for="saude"><input class="radio" type="radio" id="saude" name="ramo" value="S"/>Saúde</label>
                             <br>
-                            <label for="pet"><input class="radio" type="radio" id="pet" name="ramo" value="P" <?= ($row['ramo'] == 'classe_pet') ? 'checked' : '' ?> />Pet</label>
+                            <label for="pet"><input class="radio" type="radio" id="pet" name="ramo" value="P"/>Pet</label>
                             <br>
-                            <label for="veiculos"><input class="radio" type="radio" id="veiculos" name="ramo" value="V" <?= ($row['ramo'] == 'classe_veiculos') ? 'checked' : '' ?>>Veículos</label>
+                            <label for="veiculos"><input class="radio" type="radio" id="veiculos" name="ramo" value="V"/>Veículos</label>
                         <br><br>
                     </filedset>
                     <fieldset class="localization">
                         <label>Cidade: <br>
-                            <input type="text" id="cidade" placeholder="Novo Hamburgo">
+                            <input type="text" id="cidade" name="cidade" placeholder="Novo Hamburgo">
                         </label>
                         <br><br>
                         <label>Estado: <br>
-                            <input type="text" id="estado" placeholder="Rio Grande do Sul">
+                            <input type="text" id="estado" name="estado" placeholder="Rio Grande do Sul">
                         </label>
                         <br><br>
                         <label>Endereço: <br>
-                            <input type="text" id="endereco" placeholder="Bairro: XX, Rua: XX, nº: XX">
+                            <input type="text" id="endereco" name="endereco" placeholder="Bairro: XX, Rua: XX, nº: XX">
                         </label>
                         <br><br>
                     </fieldset>
