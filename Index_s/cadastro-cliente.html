@@ -17,26 +17,26 @@
         <div class="container">
             <div id="background">
                 <img id="goBack" onclick="goBack()" src="../images/arrow.svg" width="30px" title="Voltar" alt="Voltar"/>
-                <form>
+                <form method="post" action="cliente.php">
                     <div id="home_screen">
                         <legend>Cadastro de Clientes</legend>
                         <br>
                         <fieldset class="information">
                             <label>Nome completo: <br>
-                                <input type="text" id="name" placeholder="First-name and last-name">
+                                <input type="text" id="name" name="name" placeholder="First-name and last-name" required/>
                             </label>
                         </fieldset>
                         <fieldset class="contat">
                             <label>Email: <br>
-                                <input type="email" id="email" placeholder="contato@gmail.com.br">
+                                <input type="email" id="email" name="email" placeholder="contato@gmail.com.br" required/>
                             </label>
                             <br><br>
                             <label>Telefone: <br>
-                                <input type="tel" id="telefone" placeholder="55519XXXXXXXX">
+                                <input type="tel" id="telefone" name="telefone" placeholder="55519XXXXXXXX" required/>
                             </label>
                             <br><br>
                             <label>Senha:<br>
-                                <input class="text" type="password" id="senha" placeholder="1234">
+                                <input type="password" id="senha" name="senha" placeholder="1234" required/>
                             </label>
                         </fieldset>
                         <br>
@@ -50,21 +50,21 @@
                                 <label><input type="radio" id="others" name="sexo" value="o">Outro</label>
                             <br><br>
                             <label class="information2">Data de Nascimento:
-                                <input id="date_nas" type="date">
+                                <input id="date_nas" name="date_nas" type="date" required/>
                             </label>
                             <br><br>
                         </filedset>
                         <fieldset class="localization">
                             <label>Cidade: <br>
-                                <input type="text" id="city" placeholder="Novo Hamburgo">
+                                <input type="text" id="city" name="city" placeholder="Novo Hamburgo" required/>
                             </label>
                             <br><br>
                             <label>Estado: <br>
-                                <input type="text" id="state" placeholder="Rio Grande do Sul">
+                                <input type="text" id="state" name="state" placeholder="Rio Grande do Sul" required/>
                             </label>
                             <br><br>
                             <label>Endereço: <br>
-                                <input type="text" id="addres" placeholder="Bairro: XX, Rua: XX, nº: XX">
+                                <input type="text" id="addres" name="addres" placeholder="Bairro: XX, Rua: XX, nº: XX" required/>
                             </label>
                         </fieldset>
                         <br>

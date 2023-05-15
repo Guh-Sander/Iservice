@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.32, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
 -- Host: localhost    Database: iservice
 -- ------------------------------------------------------
--- Server version	8.0.32
+-- Server version	8.0.28
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -23,16 +23,13 @@ DROP TABLE IF EXISTS `anuncio_saude`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `anuncio_saude` (
-  `classe_saude` int NOT NULL,
+  `classe_saude` varchar(1) NOT NULL,
   `servicos_medicos_disponiveis` varchar(75) DEFAULT NULL,
   `servicos_odontologicos_disponiveis` varchar(75) DEFAULT NULL,
   `descricao` text,
   `avaliacao` decimal(10,2) DEFAULT NULL,
   `agendamento` datetime DEFAULT NULL,
-  `cliente_id_cliente` int NOT NULL,
-  PRIMARY KEY (`classe_saude`,`cliente_id_cliente`),
-  KEY `fk_anuncio_saude_cliente1_idx` (`cliente_id_cliente`),
-  CONSTRAINT `fk_anuncio_saude_cliente1` FOREIGN KEY (`cliente_id_cliente`) REFERENCES `cliente` (`id_cliente`)
+  PRIMARY KEY (`classe_saude`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -54,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-10 19:15:29
+-- Dump completed on 2023-05-14 23:36:52
