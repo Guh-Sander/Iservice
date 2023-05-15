@@ -14,69 +14,71 @@
         </script>
     </head>
     <body>
-        <div id="background" style="height: 850px;">
-            <img id="goBack" onclick="goBack()" src="../images/arrow.svg" width="30px" title="Voltar" alt="Voltar"/>
-            <form method="post" action="../peagape.php" class="$row">
-                <div id="home_screen">
-                    <legend>Cadastro de Empresa</legend>
-                    <br>
-                    <fieldset class="information">
-                        <label>Nome da Empresa: <br>
-                            <input type="text" id="name" name="name" placeholder="Iservice">
-                        </label>
-                    </fieldset>
-                    <fieldset class="contat">
-                        <label>Email: <br>
-                            <input type="email" id="email" name="email" placeholder="contato@gmail.com.br"">
-                        </label>
-                        <br><br>
-                        <label>Telefone: <br>
-                            <input type="tel" id="tel" name="tel" placeholder="55519XXXXXXXX">
-                        </label>
-                        <br><br>
-                        <label>CNPJ: <br>
-                            <input type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/XXXX-XX">
-                        </label>
-                        <br><br>
-                        <label>Senha:<br>
-                            <input type="password" name="password" id="password" placeholder="1234">
-                        </label>
-                        <br><br>
-                        <label>Anúncio da Empresa: <br>
-                            <input type="file" name="imagem" id="anuncio">
-                        </label>
-                        <br><br>
-                        <label>Descrição/Informações do serviço: <br>
-                            <input type="text" name="informacao" id="informationService" placeholder="Tabelas de preços e descrição">
-                        </label>
-                    </fieldset>
-                    <filedset class="information">
-                        <label id="ramo" class="information2" id>Setor:</label>
-                            <br>
-                            <label for="saude"><input class="radio" type="radio" id="saude" name="ramo" value="S"/>Saúde</label>
-                            <br>
-                            <label for="pet"><input class="radio" type="radio" id="pet" name="ramo" value="P"/>Pet</label>
-                            <br>
-                            <label for="veiculos"><input class="radio" type="radio" id="veiculos" name="ramo" value="V"/>Veículos</label>
-                        <br><br>
-                    </filedset>
-                    <fieldset class="localization">
-                        <label>Cidade: <br>
-                            <input type="text" id="cidade" name="cidade" placeholder="Novo Hamburgo">
-                        </label>
-                        <br><br>
-                        <label>Estado: <br>
-                            <input type="text" id="estado" name="estado" placeholder="Rio Grande do Sul">
-                        </label>
-                        <br><br>
-                        <label>Endereço: <br>
-                            <input type="text" id="endereco" name="endereco" placeholder="Bairro: XX, Rua: XX, nº: XX">
-                        </label>
-                        <br><br>
-                    </fieldset>
-                    <input id="submit" type="submit">
-                </div>
-            </form>
+        <div class="container">
+            <div id="background" style="height: 850px;">
+                <img id="goBack" onclick="goBack()" src="../images/arrow.svg" width="30px" title="Voltar" alt="Voltar"/>
+                <form method="post" action="peagape.php">
+                    <div id="home_screen">
+                        <legend>Cadastro de Empresa</legend>
+                        <br>
+                        <fieldset class="information">
+                            <label>Nome da Empresa: <br>
+                                <input type="text" id="name" name="name" placeholder="Iservice" required/>
+                            </label>
+                        </fieldset>
+                        <fieldset class="contat">
+                            <label>Email: <br>
+                                <input type="email" id="email" name="email" placeholder="contato@gmail.com.br" required/>
+                            </label>
+                            <br><br>
+                            <label>Telefone: <br>
+                                <input type="tel" id="tel" name="tel" placeholder="55519XXXXXXXX" required/>
+                            </label>
+                            <br><br>
+                            <label>CNPJ: <br>
+                                <input type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/XXXX-XX" required/>
+                            </label>
+                            <br><br>
+                            <label>Senha:<br>
+                                <input type="password" name="password" id="password" placeholder="1234" required/>
+                            </label>
+                            <br><br>
+                            <label>Imagem de anúncio da Empresa: <br>
+                                <input type="file" name="imagem" id="anuncio"/>
+                            </label>
+                            <br><br>
+                            <label>Descrição/Informações do serviço: <br>
+                                <input type="text" name="information" id="information" placeholder="Tabelas de preços e descrição" style="width: 200px;" required/>
+                            </label>
+                        </fieldset>
+                        <filedset class="information">
+                            <label id="ramo" class="information2" required>Setor:</label>
+                                <br>
+                                <label for="saude"><input class="radio" type="radio" id="saude" name="ramo" value="S"/>Saúde</label>
+                                <br>
+                                <label for="pet"><input class="radio" type="radio" id="pet" name="ramo" value="P"/>Pet</label>
+                                <br>
+                                <label for="veiculos"><input class="radio" type="radio" id="veiculos" name="ramo" value="V"/>Veículos</label>
+                            <br><br>
+                        </filedset>
+                        <fieldset class="localization">
+                            <label>Cidade: <br>
+                                <input type="text" id="cidade" name="cidade" placeholder="Novo Hamburgo" required/>
+                            </label>
+                            <br><br>
+                            <label>Estado: <br>
+                                <input type="text" id="estado" name="estado" placeholder="Rio Grande do Sul" required/>
+                            </label>
+                            <br><br>
+                            <label>Endereço: <br>
+                                <input type="text" id="endereco" name="endereco" placeholder="Bairro: XX, Rua: XX, nº: XX" required/>
+                            </label>
+                            <br><br>
+                        </fieldset>
+                        <input id="submit" type="submit">
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>
