@@ -67,10 +67,6 @@ input {
     border-radius: 8px;
 }
 
-input.text {
-    color: #000;
-}
-
 input:focus { /* Retira a borda ao clicar na caixa do input */
     box-shadow: 0 0 0 0;
     outline: 0;
@@ -85,7 +81,6 @@ input#submit {
     border-radius: 8px;
     border-color: #2DA6A4;
     font-weight: bold;
-    
     background-color: #2DA6A4;
     left: 10px;
 }
