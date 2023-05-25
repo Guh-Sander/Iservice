@@ -30,7 +30,7 @@ CREATE TABLE `anuncio_pet` (
   `avaliacao` decimal(10,2) DEFAULT NULL,
   `agendamento` datetime DEFAULT NULL,
   PRIMARY KEY (`classe_pet`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -57,7 +57,7 @@ CREATE TABLE `anuncio_saude` (
   `avaliacao` decimal(10,2) DEFAULT NULL,
   `agendamento` datetime DEFAULT NULL,
   PRIMARY KEY (`classe_saude`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -78,9 +78,9 @@ DROP TABLE IF EXISTS `anuncio_veiculos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `anuncio_veiculos` (
   `classe_veiculos` varchar(1) NOT NULL,
-  `servicos_lavagem_disponiveis` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `servicos_mecanicos_disponiveis` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `descricao` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `servicos_lavagem_disponiveis` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `servicos_mecanicos_disponiveis` varchar(50) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `descricao` text CHARACTER SET utf8mb4,
   `avaliacao` decimal(10,2) DEFAULT NULL,
   `agendamento` datetime DEFAULT NULL,
   PRIMARY KEY (`classe_veiculos`)
@@ -117,7 +117,7 @@ CREATE TABLE `cliente` (
   `agenda_de_servicos_adquiridos` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`id_cliente`),
   KEY `serviços_adiquiridos_idx` (`agenda_de_servicos_adquiridos`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +151,7 @@ CREATE TABLE `cliente_empresa` (
   `imagem` longblob,
   PRIMARY KEY (`id_empresa`),
   KEY `classe_servico_anuncio_idx` (`ramo`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
