@@ -117,7 +117,7 @@ CREATE TABLE `cliente` (
   `agenda_de_servicos_adquiridos` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`id_cliente`),
   KEY `serviços_adiquiridos_idx` (`agenda_de_servicos_adquiridos`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +151,7 @@ CREATE TABLE `cliente_empresa` (
   `imagem` longblob,
   PRIMARY KEY (`id_empresa`),
   KEY `classe_servico_anuncio_idx` (`ramo`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
