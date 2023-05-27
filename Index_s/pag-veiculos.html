@@ -6,37 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iservice - Veículos</title>
     <link rel="stylesheet" type="text/css" href="style-pags.css">
-    <link rel="stylesheet" type="text/css" href="style-navbar.css">
+    <link rel="stylesheet" type="text/css" href="nav-responsive.css">
     <link rel="icon" type="image/x-icon" href="../images/logo_Iservice.png">
 </head>
 <body> 
-    <nav>
-        <div id="menu">      
-            <ul>
-                <li class="logo">
-                    <img class="logo" src="../images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice" width="80px"/>
-                </li>
-                <li class="category"><a href="../Index.html"><img class="styleIcon" src="../images/house.svg"/> Início</a></li>
-                <li class="category"><a href="pag-saude.html"><img class="styleIcon" src="../images/heart.svg"/> Saúde</a></li>
-                <li class="category"><a href="pag-pet.html"><img class="styleIcon" src="../images/pet.png" width="16px"/> Pet</a></li>
-                <li class="category"><a href="pag-veiculos.html" style="color: #A42FC2;"><img src="../images/car.svg" style="width: 17px;"/> Veiculos</a></li>
-                <li class="category tools">
-                    <div id="divBusca">
-                        <img src="../images/lupa.png" width="20px" alt="Pesquisar..." title="Pequise"/>
-                        <input onkeyup="search_service()" type="search" id="busca" name="search" placeholder="Pesquise serviços..." />
-                        <button id="btnBusca">Buscar</button>
-                    </div>
-                    <ol id='listBusca'>
+    <nav class="MenuHorizontal"> 
+        <div class="escondeLogo">
+            <img class="logo" src="../images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice" style="padding: 4px;"/>
+        </div>
+        <ul class="retiraNumeraLista listaHorizontal centralizaVertical espacingLista">
+            <li class="category">
+                <a href="../Index.html"><img class="logo escondeLogo2" src="../images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice"/></a>
+            </li>
+            <li class="category"><a href="../Index.html"><img class="widthHome width styleIcon iconStyle" src="../images/house.svg"/><span class="escondeNameCell">Início</span></a></li>
+            <li class="category"><a href="pag-saude.html"><img class="width styleIcon iconStyle saude" src="../images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
+            <li class="category"><a href="pag-pet.html"><img class="width styleIcon iconStyle pet" src="../images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
+            <li class="category"><a href="pag-veiculos.html" style="color: #A42FC2;"><img class="widthLocal styleIcon" src="../images/car.svg"/><span class="escondeNameCell">Veículos</span></a></li>
+            <li class="escondeLogin"><a class="logar" href="login.html"><img class="width" src="../images/person.svg"/><span class="escondeNameCell">Login/Cadastrar</span></a></li>
+            <li class="category">  
+                <div class="divBusca listaHorizontal">
+                    <img id="lupa" src="../images/lupa.png" width="20px" alt="Pesquisar..." title="Pequise"/>
+                    <input id="busca" onkeyup="search_service()" type="search" name="search" placeholder="Search services..." />
+                    <button id="btnBusca">Buscar</button>
+                </div>
+                <ol id="listBusca">
+                    <div class="listaVertical retiraNumeraLista">
                         <li class="service"><a class="categoryService" href="pag-saude.html">Saúde<span class="escondeName">Saude</span></a></li>
                         <li class="service"><a class="categoryService" href="pag-pet.html">Pet</a></li>
                         <li class="service"><a class="categoryService" href="anuncio-pet-pettopp.html">Anuncio Pet Topp</a></li>
                         <li class="service"><a class="categoryService" href="pag-veiculos.html">Veículos<span class="escondeName">veiculos</span></a></li>
-                    </ol>
-                    <script src="funcion-search.js"></script>
-                </li>
-                <li class="category login"><a id="logar" href="login.html"><img src="../images/person.svg"/> Login/Cadastrar</a> </li>
-            </ul>
-        </div>
+                    </div>
+                </ol>
+                <script src="funcion-search.js"></script>
+            </li>
+            <li class="escondeLogin2"><a class="logar" href="login.html"><img class="width" src="../images/person.svg"/>Login/Cadastrar</a></li>
+        </ul>
     </nav>
     <br>
     <p>Lavagem de automóveis</p>

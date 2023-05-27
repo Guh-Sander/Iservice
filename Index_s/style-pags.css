@@ -29,6 +29,12 @@ li.anuncio img {
     border-radius: 8px;
 }
 
+li.anuncio a:hover {
+    background: #fff;
+    color: #A42FC2;
+    font-weight: bolder; 
+}
+
 figure {
     border: solid 1px #000;
     border-radius: 8px;

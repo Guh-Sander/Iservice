@@ -1,0 +1,390 @@
+body {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Esconde logo para responsividade! */
+.escondeLogo {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 2px #2DA6A4 solid;
+}
+
+/* Tira o exesso de espaço que já vem das listas */
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Tira a decoração dos links */
+li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Tira a numeração das listas */
+.retiraNumeraLista {
+    list-style: none;
+}
+
+/* Todos os elementos de uma lista ficam em uma linha de forma horizontal */
+.listaHorizontal {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Todos os elementos de uma lista fica em em linhas separadas de forma vertical */
+.listaVertical {
+    display: block;
+}
+
+/* Espaço nas lista */
+.espacingLista {
+    justify-content: space-between;    
+}
+
+.centralizaVertical {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+li.category a:hover {
+    background: #fff;
+    color: #000;
+    text-shadow: #5F9EA0 0.1em 0.1em;
+}
+
+img.width {
+    width: 16px;
+    padding-right: 5px;
+}
+
+.widthLocal {
+    width: 18px;
+    padding-right: 5px;
+}
+
+img.styleIcon:hover {
+    width: 17px;
+}
+
+.logo { /* O tamanho do menu depende do tamanho do logo!!! */
+    width: 70px;
+}
+
+/* Refere-se a todas as funcionalidades que tem no menu */
+li.category {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    padding: 4px;
+}
+
+/* Esconde listas para a respónsividade do site */
+.escondeLogin {
+    display: none;
+}
+
+/* A parte a baixo faz parte de todos estilos do filtro de pesquisa */
+.divBusca{
+    background-color:#E0EEEE;
+    border: solid 2px #2DA6A4;
+    border-radius: 10px;
+    width: 250px;
+    height: 25px;
+}
+
+#lupa {
+    padding: 3px 5px 2px 8px;
+}
+
+#busca {
+    background-color: transparent;
+    font-size: 18px;
+    border: transparent;
+    height: 25px;
+    width: 147px;
+}
+
+#busca:focus, input:focus { /* Retira a borda ao clicar na caixa do input */
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+#btnBusca{
+    border: none;
+    float: right;
+    height: 25px;
+    border-radius: 0 7px 7px 0;
+    width: 70px;
+    font-weight: bold;
+    background:#2DA6A4;
+}
+
+button#btnBusca:hover {
+    cursor: pointer;
+    color: #E0EEEE;
+    background-color: #5F9EA0;
+}
+
+#listBusca { /* Esconde a lista usada para filtrar as páginas pesquisadas */
+    display: none;
+    padding: 4px;
+    position: absolute;
+}
+
+li.service {
+    width: 180px;
+    text-align: center;
+    background-color: #E0EEEE;
+    border: solid 2px #5F9EA0;
+    margin-top: -4px;
+}
+
+li.service a.categoryService:hover {
+    background-color: #E0EEEE;
+    border-color: #2DA6A4;
+    cursor: pointer;
+}
+
+.escondeName { /* Esconde a segunda opção de nome com acentuação */
+    display: none;
+}
+
+/* Refere-se ao botão, via link, de "Login/cadastro" */
+.logar {
+    background-color: #2DA6A4;
+    color: #000;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+.logar:hover {
+    background-color: #5F9EA0;
+    border: #000 solid 2px;
+    color: #fff;
+}
+
+@media (max-width: 840px) {
+    .MenuHorizontal {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .centralizaVertical {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .escondeLogin {
+        display: flex;
+    }
+
+    .escondeLogin2 {
+        display: none;
+    }
+
+    .escondeLogo {
+        display: flex;
+    } 
+
+    .escondeLogo2 {
+        display: none;
+    } 
+
+    .divBusca {
+        width: 485px;
+    }
+
+    #busca {
+        width: 305px;
+    } 
+
+    #btnBusca{
+        width: 150px;
+    }
+}
+
+@media (max-width: 590px) {
+    .logo {
+        width: 50px;
+    }
+
+    img.width {
+        width: 20px;
+    }
+
+    img.widthLocal {
+        width: 25px;
+    }
+
+    img.iconStyle {
+        margin: 4px;
+        padding: 4px;
+        border-radius: 100%;
+        border: solid #000 2px;
+    }
+
+    img.iconStyle:hover {
+        border-radius: 6px;
+        width: 15px;
+    }
+
+    img.saude {
+        background-color: #FA2911;
+    }
+
+    img.saude:hover {
+        background-color: #FA6F5C;
+    }
+
+    img.pet {
+        background-color: #F9F72B;
+    }
+
+    img.pet:hover {
+        background-color: #FAF609;
+    }
+
+    img.veiculos {
+        background-color: #2AACFA;
+    }
+
+    img.veiculos:hover {
+        background-color: #67BCF9;
+    }
+
+    span.escondeNameCell {
+        display: none;
+    }
+
+    .escondeLogin {
+        display: flex;
+    }
+
+    .escondeLogin2 {
+        display: none;
+    }
+
+    .logar {
+        width: 20px;
+        margin: 2px;
+        padding: 2px;
+        border-radius: 25%;
+        border: solid #000 2px;
+    }
+
+    .espacingLista2 {
+        justify-content: space-between;
+    }
+
+    li.category {
+        padding: 0;
+    }
+
+    .divBusca {
+        width: 327px;
+        height: 22px;
+    }
+
+    #busca {
+        width: 184px;
+        height: 22px;
+    } 
+
+    #btnBusca{
+        width: 110px;
+        height: 22px;
+    }
+
+    nav {
+        padding-bottom: 2px;
+    }
+}
+
+@media (max-width: 405px) {
+    .escondeLogo {
+        display: none;
+    } 
+
+    .escondeLogo2 {
+        display: flex;
+    } 
+
+
+    img.widthHome {
+        display: none;
+    }
+
+    .divBusca {
+        width: 298px;
+        height: 22px;
+    }
+
+    #busca {
+        width: 179px;
+        height: 22px;
+    } 
+
+    #btnBusca{
+        width: 90px;
+        height: 22px;
+    }
+}
+
+/* Para celulares com no máximo 300px */
+@media (max-width: 320px) {
+    .logo {
+        width: 40px;
+    }
+
+    img.width {
+        width: 17px;
+    }
+
+    img.iconStyle {
+        margin: 4px;
+        padding: 4px;
+        border-radius: 100%;
+        border: solid #000 2px;
+    }
+
+    img.iconStyle:hover {
+        border-radius: 6px;
+        width: 10px;
+    }
+
+    .logar {
+        width: 15px;
+        height: 18px;
+    }
+
+    .divBusca {
+        width: 223px;
+        height: 18px;
+    }
+
+    #busca {
+        width: 120px;
+        height: 18px;
+    } 
+
+    #btnBusca{
+        width: 110px;
+        height: 18px;
+    }
+}

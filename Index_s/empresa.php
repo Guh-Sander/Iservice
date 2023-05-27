@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', 'ienh', 'iservice');
+$conn = mysqli_connect('localhost', 'root', 'GHSgustasan0110850', 'iservice');
 if (!$conn) {
     die('Could not connect: ');
 }

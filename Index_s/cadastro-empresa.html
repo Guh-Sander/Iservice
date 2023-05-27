@@ -23,33 +23,33 @@
                         <br>
                         <fieldset class="information">
                             <label>Nome da Empresa: <br>
-                                <input type="text" id="name" name="name" placeholder="Iservice" required/>
+                                <input type="text" id="name" name="name" placeholder="Iservice" maxlength="75" required/>
                             </label>
                         </fieldset>
                         <fieldset class="contat">
                             <label>Email: <br>
-                                <input type="email" id="email" name="email" placeholder="contato@gmail.com.br" required/>
+                                <input type="email" id="email" name="email" placeholder="contato@gmail.com.br" maxlength="75" required/>
                             </label>
                             <br><br>
                             <label>Telefone: <br>
-                                <input type="tel" id="tel" name="tel" placeholder="55519XXXXXXXX" required/>
+                                <input type="tel" id="tel" name="tel" placeholder="55519XXXXXXXX" minlength="11" maxlength="13" required/>
                             </label>
                             <br><br>
                             <label>CNPJ: <br>
-                                <input type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/XXXX-XX" required/>
+                                <input type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/XXXX-XX" minlength="14" maxlength="18" required/>
                             </label>
                             <br><br>
                             <label>Senha:<br>
-                                <input type="password" name="password" id="password" placeholder="1234" required/>
+                                <input type="password" name="password" id="password" placeholder="1234" minlength="5" maxlength="30" required/>
                             </label>
                             <br><br>
                             <!-- imagem Iservice  -->
                             <label>Imagem de anúncio da Empresa: <br>
-                                <input type="file" name="imagem" id="anuncio"/>
+                                <input type="file" name="imagem" id="anuncio" required/>
                             </label>
                             <br><br>
                             <label>Descrição/Informações do serviço: <br>
-                                <input type="text" name="information" id="information" placeholder="Tabelas de preços e descrição" style="width: 200px;" required/>
+                                <input type="text" name="information" id="information" placeholder="Tabelas de preços e descrição" style="width: 200px;" maxlength="350" required/>
                             </label>
                         </fieldset>
                         <filedset class="information">
@@ -64,15 +64,15 @@
                         </filedset>
                         <fieldset class="localization">
                             <label>Cidade: <br>
-                                <input type="text" id="cidade" name="cidade" placeholder="Novo Hamburgo" required/>
+                                <input type="text" id="cidade" name="cidade" placeholder="Novo Hamburgo" minlength="2" maxlength="70" required/>
                             </label>
                             <br><br>
                             <label>Estado: <br>
-                                <input type="text" id="estado" name="estado" placeholder="Rio Grande do Sul" required/>
+                                <input type="text" id="estado" name="estado" placeholder="Rio Grande do Sul" minlength="2" maxlength="70"  required/>
                             </label>
                             <br><br>
                             <label>Endereço: <br>
-                                <input type="text" id="endereco" name="endereco" placeholder="Bairro: XX, Rua: XX, nº: XX" required/>
+                                <input type="text" id="endereco" name="endereco" placeholder="Bairro: XX, Rua: XX, nº: XX" maxlength="200" required/>
                             </label>
                             <br><br>
                         </fieldset>
