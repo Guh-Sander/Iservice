@@ -15,15 +15,28 @@
             <img class="logo" src="images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice" style="padding: 4px;"/>
         </div>
         <ul class="retiraNumeraLista listaHorizontal centralizaVertical espacingLista">
+            <div class="MenuInlineBlock espacingLista2">
+                <li class="category MenuBlock"><a href="Index.html" style="color: #A42FC2;"><img class="widthLocal escondeIconCell" src="images/house.svg"/><span class="escondeNameCell">Início</span></a></li>
+                <li class="category MenuBlock"><a href="Index_s/pag-saude.html"><img class="width escondeIconCell" src="images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
+                <li class="category MenuBlock"><a href="Index_s/pag-pet.html"><img class="width escondeIconCell" src="images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
+                <li class="category MenuBlock"><a href="Index_s/pag-veiculos.html"><img class="width escondeIconCell" src="images/car.svg"/><span class="escondeNameCell">Veículos</span></a></li>
+            </div>
+            <div class="MenuTrigger espacingLista">
+                <button id="menu_icone" title="Abrir Menu"><img src="images/menu_icone.png" alt="Abre o Menu para navegação de páginas." title="Abrir Menu"/></button>
+            </div>
+            <div class="mensageIservice">
+                <a href="Index.html"><img class="iservice_msg" src="images/Iservice_msg.png"/></a>
+            </div>
             <li class="category">
                 <a href="Index.html"><img class="logo escondeLogo2" src="images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice"/></a>
             </li>
-            <li class="category"><a href="Index.html" style="color: #A42FC2;"><img class="widthHome widthLocal" src="images/house.svg"/><span class="escondeNameCell">Início</span></a></li>
-            <li class="category"><a href="Index_s/pag-saude.html"><img class="width styleIcon iconStyle saude" src="images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
-            <li class="category"><a href="Index_s/pag-pet.html"><img class="width styleIcon iconStyle pet" src="images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
-            <li class="category"><a href="Index_s/pag-veiculos.html"><img class="width styleIcon iconStyle veiculos" src="images/car.svg"/><span class="escondeNameCell">Veículos</span></a></li>
-            <li class="escondeLogin"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeNameCell">Login/Cadastrar</span></a></li>
-            <li class="category">  
+            <script src="Index_s/funcion-menu-trigger.js"></script>
+            <li class="category escondeMainMenu"><a href="Index.html" style="color: #A42FC2;"><img class="widthHome widthLocal" src="images/house.svg"/><span class="escondeNameCell">Início</span></a></li>
+            <li class="category escondeMainMenu"><a href="Index_s/pag-saude.html"><img class="width" src="images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
+            <li class="category escondeMainMenu"><a href="Index_s/pag-pet.html"><img class="width" src="images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
+            <li class="category escondeMainMenu"><a href="Index_s/pag-veiculos.html"><img class="width" src="images/car.svg"/><span class="escondeNameCell">Veículos</span></a></li>
+            <li class="escondeLogin"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeNameCellLogin">Login/Cadastrar</span></a></li>
+            <li class="category tools">  
                 <div class="divBusca listaHorizontal">
                     <img id="lupa" src="images/lupa.png" width="20px" alt="Pesquisar..." title="Pequise"/>
                     <input id="busca" onkeyup="search_service()" type="search" name="search" placeholder="Search services..." />
@@ -39,7 +52,7 @@
                 </ol>
                 <script src="Index_s/funcion-search.js"></script>
             </li>
-            <li class="escondeLogin2"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/>Login/Cadastrar</a></li>
+            <li class="escondeLogin2"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>
         </ul>
     </nav>
     <br>

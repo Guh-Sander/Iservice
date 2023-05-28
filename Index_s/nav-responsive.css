@@ -9,6 +9,16 @@ body {
     display: none;
 }
 
+/* Esconde Menu em listas para responsividade! */
+.MenuInlineBlock, .MenuTrigger, .mensageIservice {
+    display: none;
+}
+
+button#menu_icone {
+    background-color: #2DA6A4;
+    border-radius: 20%;
+}
+
 nav {
     position: fixed;
     background-color: #fff;
@@ -176,6 +186,7 @@ li.service a.categoryService:hover {
     color: #fff;
 }
 
+/* Define a estilização responsiva para largura máxima de 840 pixels!!! */
 @media (max-width: 840px) {
     .MenuHorizontal {
         display: flex;
@@ -219,81 +230,69 @@ li.service a.categoryService:hover {
     }
 }
 
+/* Define a estilização responsiva para largura máxima de 590 pixels!!! */
 @media (max-width: 590px) {
-    .logo {
-        width: 50px;
-    }
-
-    img.width {
-        width: 20px;
-    }
-
-    img.widthLocal {
-        width: 25px;
-    }
-
-    img.iconStyle {
-        margin: 4px;
-        padding: 4px;
-        border-radius: 100%;
-        border: solid #000 2px;
-    }
-
-    img.iconStyle:hover {
-        border-radius: 6px;
-        width: 15px;
-    }
-
-    img.saude {
-        background-color: #FA2911;
-    }
-
-    img.saude:hover {
-        background-color: #FA6F5C;
-    }
-
-    img.pet {
-        background-color: #F9F72B;
-    }
-
-    img.pet:hover {
-        background-color: #FAF609;
-    }
-
-    img.veiculos {
-        background-color: #2AACFA;
-    }
-
-    img.veiculos:hover {
-        background-color: #67BCF9;
-    }
-
-    span.escondeNameCell {
-        display: none;
-    }
-
-    .escondeLogin {
-        display: flex;
-    }
-
-    .escondeLogin2 {
-        display: none;
-    }
-
-    .logar {
-        width: 20px;
-        margin: 2px;
-        padding: 2px;
-        border-radius: 25%;
-        border: solid #000 2px;
+    .MenuHorizontal {
+        padding-bottom: 12px;
+        padding-top: 12px;
     }
 
     .espacingLista2 {
         justify-content: space-between;
     }
 
-    li.category {
-        padding: 0;
+    .escondeLogo {
+        display: none;
+    } 
+
+    .escondeLogo2 {
+        display: none;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .MenuTrigger {
+        display: flex;
+        margin-left: 4px;
+        margin-top: -8px;
+    }
+
+    .escondeLogin {
+        display: none;
+    }
+
+    .escondeLogin2 {
+        display: flex;
+    }
+
+    .logar {
+        font-size: smaller;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .escondeMainMenu {
+        display: none;
+    }
+
+    .MenuInlineBlock {
+        width: 100%; 
+        flex-wrap: nowrap;
+        margin-top: -12px;
+        border-bottom: solid #2DA6A4 2px;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .MenuBlock {
+        width: 100px;
+        border-width: 0 0 0 2px;
+        border-color: #2DA6A4;
+        border-style: solid;
     }
 
     .divBusca {
@@ -314,77 +313,112 @@ li.service a.categoryService:hover {
     nav {
         padding-bottom: 2px;
     }
+
+    .width {
+        width: 20px;
+    }
 }
 
-@media (max-width: 405px) {
-    .escondeLogo {
-        display: none;
-    } 
+@media (max-width: 540px) {
+    .logar {
+        width: 40px;   
+    }
 
-    .escondeLogo2 {
+    .escondeLoginName {
+        display: none;
+    }
+}
+
+@media (max-width: 468px) {
+    .escondeLoginName {
+        display: none;
+    }
+
+    .espacingLista2 {
+        justify-content: space-around;
+    }
+
+    .escondeLogin2 {
+        display: none;
+    }
+
+    .escondeLogin {
         display: flex;
-    } 
-
-
-    img.widthHome {
-        display: none;
     }
 
-    .divBusca {
-        width: 298px;
-        height: 22px;
-    }
-
-    #busca {
-        width: 179px;
-        height: 22px;
-    } 
-
-    #btnBusca{
-        width: 90px;
-        height: 22px;
-    }
-}
-
-/* Para celulares com no máximo 300px */
-@media (max-width: 320px) {
-    .logo {
-        width: 40px;
-    }
-
-    img.width {
-        width: 17px;
-    }
-
-    img.iconStyle {
-        margin: 4px;
-        padding: 4px;
-        border-radius: 100%;
-        border: solid #000 2px;
-    }
-
-    img.iconStyle:hover {
-        border-radius: 6px;
-        width: 10px;
+    .escondeNameCellLogin {
+        display: flex;
     }
 
     .logar {
-        width: 15px;
-        height: 18px;
+        width: 145px;
+        font-size: medium;
+        margin: 0;
+        padding: 0; 
+        border: solid #2DA6A4 1px;
+    }
+
+    .espacingLista {
+        justify-content: space-between;    
+    }
+
+    .escondeIconCell {
+        display: block;
+    }
+
+    .escondeNameCell {
+        display: none;
+    }
+
+    .MenuInlineBlock {
+        align-items: center;
+        margin-top: -8px;
+    }
+
+    .MenuTrigger {
+        margin-top: -6px;
+    }
+
+    .MenuHorizontal {
+        padding-bottom: 0;
+        padding-top: 6px;
+    }
+
+    .mensageIservice {
+        display: block;
+    }
+
+    .iservice_msg {
+        width: 120px;
+    }
+
+    .MenuBlock {
+        width: 40px;
+        border: none;
+    }
+
+    img.width {
+        width: 20px;
+    }
+
+    img.widthLocal {
+        width: 25px;
+    }
+
+    .tools {
+        margin-top: -2px;
+        margin-bottom: -2px;
     }
 
     .divBusca {
-        width: 223px;
-        height: 18px;
+        height: 20px;
     }
 
     #busca {
-        width: 120px;
-        height: 18px;
+        height: 20px;
     } 
 
     #btnBusca{
-        width: 110px;
-        height: 18px;
+        height: 20px;
     }
 }

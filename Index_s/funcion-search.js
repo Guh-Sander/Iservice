@@ -42,7 +42,7 @@ function busca() {
     }
 }
 
-let button = document.getElementById('btnBusca');
+let buttonBusca = document.getElementById('btnBusca');
 let input = document.getElementById('busca');
 
 // Adiciona um evento de keydown ao input
@@ -55,6 +55,6 @@ input.addEventListener('keydown', function(event) {
 });
 
 // Adiciona um evento de click ao botão
-button.addEventListener('click', function() {
+buttonBusca.addEventListener('click', function() {
     busca(); // Realiza a busca e vai para a página HTML correspondente
 });
