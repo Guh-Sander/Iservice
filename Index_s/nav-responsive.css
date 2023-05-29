@@ -319,7 +319,7 @@ li.service a.categoryService:hover {
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 543px) {
     .logar {
         width: 40px;   
     }
@@ -377,6 +377,10 @@ li.service a.categoryService:hover {
 
     .MenuTrigger {
         margin-top: -6px;
+    }
+
+    button#menu_icone {
+        height: 30px;
     }
 
     .MenuHorizontal {
