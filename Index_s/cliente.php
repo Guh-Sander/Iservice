@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', 'GHSgustasan0110850', 'iservice');
+$conn = mysqli_connect('sql305.epizy.com', 'epiz_34279597', 'BrJw8fBk6di7Q', 'epiz_34279597_iservice');
 if (!$conn) {
     die('Could not connect: ');
 }
