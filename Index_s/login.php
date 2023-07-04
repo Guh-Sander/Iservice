@@ -31,7 +31,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
                     session_start();
                 }
                 $_SESSION['cliente'] = $usuario['nome_cliente'];
-                header("Location: logado.php");
+                header("Location: ../index.php");
             } else {
                 echo "Falha ao logar! Email ou senha incorretos";
             }
@@ -47,7 +47,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
                     session_start();
                 }
                 $_SESSION['cliente'] = $usuario_empresa['nome_empresa'];
-                header("Location: logado.php");
+                header("Location: ../index.php");
             } else {
                 echo "Falha ao logar! Email ou senha incorretos";
             }
@@ -57,19 +57,3 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
     }
 }
 ?>
-
-
-// Consulta no banco de dados para verificar o login
-// $cliente = "SELECT * FROM cliente WHERE email='$email' AND senha='$senha'";
-// $empresa = "SELECT * FROM cliente_empresa WHERE email='$email' AND senha='$senha'";
-// if ($conn->query($cliente)) {
-//     <script>window.alert("Login realizado com sucesso!")</script><?;
-// } else if ($conn->query($empresa)) {
-    // <script>window.alert("Login realizado com sucesso!")</script><?;
-// } else {
-//     // Login falhou
-//     <script>window.alert("Email ou senha inválidos!")</script><?;
-// }
-
-//   $conn->close();
-// 

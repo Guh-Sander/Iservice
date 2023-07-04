@@ -1,11 +1,3 @@
-<?php 
-
-if(!isset($_SESSION)){
-    session_start();
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,35 +10,48 @@ if(!isset($_SESSION)){
     <link rel="icon" type="image/x-icon" href="images/logo_Iservice.png">
 </head>
 <body> 
+    <?php 
+
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
+    ?>
     <nav class="MenuHorizontal"> 
         <div class="escondeLogo">
             <img class="logo" src="images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice" style="padding: 4px;"/>
         </div>
         <ul class="retiraNumeraLista listaHorizontal centralizaVertical espacingLista">
             <div class="MenuInlineBlock espacingLista2" style="display: none;">
-                <li class="category MenuBlock"><a href="index.html" style="color: #A42FC2;"><img class="widthLocal escondeIconCell" src="images/house.svg"/><span class="escondeNameCell">Início</span></a></li>
-                <li class="category MenuBlock"><a href="Index_s/pag-saude.html"><img class="width escondeIconCell" src="images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
-                <li class="category MenuBlock"><a href="Index_s/pag-pet.html"><img class="width escondeIconCell" src="images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
+                <li class="category MenuBlock"><a href="index.php" style="color: #A42FC2;"><img class="widthLocal escondeIconCell" src="images/house.svg"/><span class="escondeNameCell">Início</span></a></li>
+                <li class="category MenuBlock"><a href="index.php"><img class="width escondeIconCell" src="images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
+                <li class="category MenuBlock"><a href="index.php"><img class="width escondeIconCell" src="images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
                 <li class="category MenuBlock"><a href="Index_s/pag-veiculos.html"><img class="width escondeIconCell" src="images/car.svg"/><span class="escondeNameCell">Veículos</span></a></li>
             </div>
             <div class="MenuTrigger espacingLista">
                 <button id="menu_icone" title="Abrir Menu"><img src="images/menu_icone.png" alt="Abre o Menu para navegação de páginas." title="Abrir Menu"/></button>
             </div>
             <div class="mensageIservice">
-                <a href="index.html"><img class="iservice_msg" src="images/Iservice_msg.png"/></a>
+                <a href="Index.php"><img class="iservice_msg" src="images/Iservice_msg.png"/></a>
             </div>
             <li class="category">
-                <a href="index.html"><img class="logo escondeLogo2" src="images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice"/></a>
+                <a href="Index.php"><img class="logo escondeLogo2" src="images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice"/></a>
             </li>
             <script type="text/javascript" src="Index_s/funcion-menu-trigger.js"></script>
-            <li class="category escondeMainMenu"><a href="Index.html" style="color: #A42FC2;"><img class="widthHome widthLocal" src="images/house.svg"/><span class="escondeNameCell">Início</span></a></li>
-            <li class="category escondeMainMenu"><a href="Index_s/pag-saude.html"><img class="width" src="images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
-            <li class="category escondeMainMenu"><a href="Index_s/pag-pet.html"><img class="width" src="images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
-            <li class="category escondeMainMenu"><a href="Index_s/pag-veiculos.html"><img class="width" src="images/car.svg"/><span class="escondeNameCell">Veículos</span></a></li>
-
-
-            <li class="escondeLogin"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeNameCellLogin"><?php echo $_SESSION['cliente']?></span></a></li>
-
+            <li class="category escondeMainMenu"><a href="index.php" style="color: #A42FC2;"><img class="widthHome widthLocal" src="images/house.svg"/><span class="escondeNameCell">Início</span></a></li>
+            <li class="category escondeMainMenu"><a href="Index_s/pag-saude.php"><img class="width" src="images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
+            <li class="category escondeMainMenu"><a href="Index_s/pag-pet.php"><img class="width" src="images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
+            <li class="category escondeMainMenu"><a href="Index_s/pag-veiculos.php"><img class="width" src="images/car.svg"/><span class="escondeNameCell">Veículos</span></a></li>
+            
+            <?php
+            if (isset($_SESSION['cliente'])) {
+                // Exibir o nome do usuário
+                echo '<li class="escondeLogin"><a class="logar"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
+            } else {
+                // Caso o usuário não esteja autenticado, exibir "Login/Cadastrar"
+                echo '<li class="escondeLogin"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
+            }
+            ?>
 
             <li class="category tools">  
                 <div class="divBusca listaHorizontal">
@@ -56,15 +61,24 @@ if(!isset($_SESSION)){
                 </div>
                 <ol id="listBusca">
                     <div class="listaVertical retiraNumeraLista">
-                        <li class="service"><a class="categoryService" href="Index_s/pag-saude.html">Saúde<span class="escondeName">Saude</span></a></li>
-                        <li class="service"><a class="categoryService" href="Index_s/pag-pet.html">Pet</a></li>
+                        <li class="service"><a class="categoryService" href="Index_s/pag-saude.php">Saúde<span class="escondeName">Saude</span></a></li>
+                        <li class="service"><a class="categoryService" href="Index_s/pag-pet.php">Pet</a></li>
                         <li class="service"><a class="categoryService" href="Index_s/anuncio-pet-pettopp.html">Anuncio Pet Topp</a></li>
-                        <li class="service"><a class="categoryService" href="Index_s/pag-veiculos.html">Veículos<span class="escondeName">veiculos</span></a></li>
+                        <li class="service"><a class="categoryService" href="Index_s/pag-veiculos.php">Veículos<span class="escondeName">veiculos</span></a></li>
                     </div>
                 </ol>
                 <script type="text/javascript" src="Index_s/funcion-search.js"></script>
             </li>
-            <li class="escondeLogin2"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName"><?php echo $_SESSION['cliente']?></span></a></li>
+
+            <?php
+            if (isset($_SESSION['cliente'])) {
+                // Exibir o nome do usuário
+                echo '<li class="escondeLogin2"><a class="logar"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
+            } else {
+                // Caso o usuário não esteja autenticado, exibir "Login/Cadastrar"
+                echo '<li class="escondeLogin2"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
+            }
+            ?>
         </ul>
     </nav>
     <br>
@@ -117,3 +131,4 @@ if(!isset($_SESSION)){
         </address>
     </footer>
 </body>
+</html>
