@@ -42,16 +42,35 @@
             <li class="category escondeMainMenu"><a href="Index_s/pag-saude.php"><img class="width" src="images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
             <li class="category escondeMainMenu"><a href="Index_s/pag-pet.php"><img class="width" src="images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
             <li class="category escondeMainMenu"><a href="Index_s/pag-veiculos.php"><img class="width" src="images/car.svg"/><span class="escondeNameCell">Veículos</span></a></li>
-            
+            <div class="menu-container">
+
             <?php
             if (isset($_SESSION['cliente'])) {
                 // Exibir o nome do usuário
-                echo '<li class="escondeLogin"><a class="logar"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
+                echo '<li class="escondeLogin"><a class="logar" onclick="mostrarMenu()"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
+                
             } else {
                 // Caso o usuário não esteja autenticado, exibir "Login/Cadastrar"
                 echo '<li class="escondeLogin"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
             }
             ?>
+            <!-- funçao para exixbir o menu -->
+            <script>
+                function mostrarMenu() {
+                    var menu = document.getElementById("menuCliente");
+                    if (menu.style.display === "block") {
+                        menu.style.display = "none";
+                    } else {
+                        menu.style.display = "block";
+                    }}
+            </script>
+            <!-- menu -->
+            <div id="menuCliente" style="display: none;">
+                <ul>
+                    <li>Minha agenda</li>
+                    <li><a href="Index_s/logout.php">Sair</a></li>
+                </ul>
+            </div>
 
             <li class="category tools">  
                 <div class="divBusca listaHorizontal">
@@ -73,7 +92,7 @@
             <?php
             if (isset($_SESSION['cliente'])) {
                 // Exibir o nome do usuário
-                echo '<li class="escondeLogin2"><a class="logar"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
+                echo '<li class="escondeLogin2"><a class="logar" onclick="mostrarMenu()"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
             } else {
                 // Caso o usuário não esteja autenticado, exibir "Login/Cadastrar"
                 echo '<li class="escondeLogin2"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
