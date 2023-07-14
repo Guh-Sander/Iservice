@@ -35,7 +35,7 @@
                 <a href="Index.php"><img class="iservice_msg" src="images/Iservice_msg.png"/></a>
             </div>
             <li class="category">
-                <a href="Index.php"><img class="logo escondeLogo2" src="images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice"/></a>
+                <a href="index.php"><img class="logo escondeLogo2" src="images/logo_Iservice.png" tittle="Iservice" alt="logo do Iservice"/></a>
             </li>
             <script type="text/javascript" src="Index_s/funcion-menu-trigger.js"></script>
             <li class="category escondeMainMenu"><a href="index.php" style="color: #A42FC2;"><img class="widthHome widthLocal" src="images/house.svg"/><span class="escondeNameCell">Início</span></a></li>
