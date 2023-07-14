@@ -12,7 +12,6 @@ p {
 
 p#cm {
     padding-left: 30px;
-    padding-top: 390px;
 }
 
 li.anuncio {
@@ -83,4 +82,8 @@ a.contatDev {
 a.contatDev:hover {
     border-width: 1px;
     text-shadow: #555 0.1em 0.1em;
+}
+
+@media (max-width: 400px) {
+
 }

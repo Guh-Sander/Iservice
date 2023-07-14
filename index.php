@@ -24,9 +24,9 @@
         <ul class="retiraNumeraLista listaHorizontal centralizaVertical espacingLista">
             <div class="MenuInlineBlock espacingLista2" style="display: none;">
                 <li class="category MenuBlock"><a href="index.php" style="color: #A42FC2;"><img class="widthLocal escondeIconCell" src="images/house.svg"/><span class="escondeNameCell">Início</span></a></li>
-                <li class="category MenuBlock"><a href="index.php"><img class="width escondeIconCell" src="images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
-                <li class="category MenuBlock"><a href="index.php"><img class="width escondeIconCell" src="images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
-                <li class="category MenuBlock"><a href="Index_s/pag-veiculos.html"><img class="width escondeIconCell" src="images/car.svg"/><span class="escondeNameCell">Veículos</span></a></li>
+                <li class="category MenuBlock"><a href="Index_s/pag-saude.php"><img class="width escondeIconCell" src="images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
+                <li class="category MenuBlock"><a href="Index_s/pag-pet.php"><img class="width escondeIconCell" src="images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
+                <li class="category MenuBlock"><a href="Index_s/pag-veiculos.php"><img class="width escondeIconCell" src="images/car.svg"/><span class="escondeNameCell">Veículos</span></a></li>
             </div>
             <div class="MenuTrigger espacingLista">
                 <button id="menu_icone" title="Abrir Menu"><img src="images/menu_icone.png" alt="Abre o Menu para navegação de páginas." title="Abrir Menu"/></button>
@@ -42,36 +42,17 @@
             <li class="category escondeMainMenu"><a href="Index_s/pag-saude.php"><img class="width" src="images/heart.svg"/><span class="escondeNameCell">Saúde</span></a></li>
             <li class="category escondeMainMenu"><a href="Index_s/pag-pet.php"><img class="width" src="images/pet.png"/><span class="escondeNameCell">Pet</span></a></li>
             <li class="category escondeMainMenu"><a href="Index_s/pag-veiculos.php"><img class="width" src="images/car.svg"/><span class="escondeNameCell">Veículos</span></a></li>
-            <div class="menu-container">
-
             <?php
-            if (isset($_SESSION['cliente'])) {
-                // Exibir o nome do usuário
-                echo '<li class="escondeLogin"><a class="logar" onclick="mostrarMenu()"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
-                
-            } else {
-                // Caso o usuário não esteja autenticado, exibir "Login/Cadastrar"
-                echo '<li class="escondeLogin"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
-            }
-            ?>
-            <!-- funçao para exixbir o menu -->
-            <script>
-                function mostrarMenu() {
-                    var menu = document.getElementById("menuCliente");
-                    if (menu.style.display === "block") {
-                        menu.style.display = "none";
+                if (isset($_SESSION['cliente'])) {
+                        // Exibir o nome do usuário
+                        echo '<li class="escondeLogin"><a class="logar" onclick="mostrarMenu()"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
+                        
                     } else {
-                        menu.style.display = "block";
-                    }}
-            </script>
-            <!-- menu -->
-            <div id="menuCliente" style="display: none;">
-                <ul>
-                    <li>Minha agenda</li>
-                    <li><a href="Index_s/logout.php">Sair</a></li>
-                </ul>
-            </div>
-
+                        // Caso o usuário não esteja autenticado, exibir "Login/Cadastrar"
+                        echo '<li class="escondeLogin"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
+                    }
+                    // Login 1 aparece
+            ?>
             <li class="category tools">  
                 <div class="divBusca listaHorizontal">
                     <img id="lupa" src="images/lupa.png" width="20px" alt="Pesquisar..." title="Pequise"/>
@@ -88,16 +69,33 @@
                 </ol>
                 <script type="text/javascript" src="Index_s/funcion-search.js"></script>
             </li>
-
             <?php
-            if (isset($_SESSION['cliente'])) {
-                // Exibir o nome do usuário
-                echo '<li class="escondeLogin2"><a class="logar" onclick="mostrarMenu()"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
-            } else {
-                // Caso o usuário não esteja autenticado, exibir "Login/Cadastrar"
-                echo '<li class="escondeLogin2"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
-            }
+                if (isset($_SESSION['cliente'])) {
+                    // Exibir o nome do usuário
+                    echo '<li class="escondeLogin2"><a class="logar" onclick="mostrarMenu()"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
+                } else {
+                    // Caso o usuário não esteja autenticado, exibir "Login/Cadastrar"
+                    echo '<li class="escondeLogin2"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
+                }
+                // Login 2 aparece
             ?>
+            <!-- funçao para exixbir o menu -->
+            <script>
+                function mostrarMenu() {
+                    var menu = document.getElementById("menuCliente");
+                    if (menu.style.display === "block") {
+                        menu.style.display = "none";
+                    } else {
+                        menu.style.display = "block";
+                    }}
+            </script>
+            <!-- menu -->
+            <div id="menuCliente" style="display: none; border: 1px solid #000; border-radius: 8px; font-size: small; padding: 2px; background-color: #2DA6A4">
+                <ul class="retiraNumeraLista">
+                    <li>Minha agenda</li>
+                    <li><a href="Index_s/logout.php">Sair</a></li>
+                </ul>
+            </div>
         </ul>
     </nav>
     <br>

@@ -45,10 +45,10 @@
             <?php
             if (isset($_SESSION['cliente'])) {
                 // Exibir o nome do usuário
-                echo '<li class="escondeLogin"><a class="logar"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
+                echo '<li class="escondeLogin"><a class="logar" onclick="mostrarMenu()"><img class="width" src="../images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
             } else {
                 // Caso o usuário não esteja autenticado, exibir "Login/Cadastrar"
-                echo '<li class="escondeLogin"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
+                echo '<li class="escondeLogin"><a class="logar" href="Index_s/login.html"><img class="width" src="../images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
             }
             ?>
             <li class="category tools">  
@@ -70,12 +70,29 @@
             <?php
             if (isset($_SESSION['cliente'])) {
                 // Exibir o nome do usuário
-                echo '<li class="escondeLogin2"><a class="logar"><img class="width" src="images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
+                echo '<li class="escondeLogin2"><a class="logar" onclick="mostrarMenu()"><img class="width" src="../images/person.svg"/><span class="escondeLoginName">' . $_SESSION['cliente'] . '</span></a></li>';
             } else {
                 // Caso o usuário não esteja autenticado, exibir "Login/Cadastrar"
-                echo '<li class="escondeLogin2"><a class="logar" href="Index_s/login.html"><img class="width" src="images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
+                echo '<li class="escondeLogin2"><a class="logar" href="login.html"><img class="width" src="../images/person.svg"/><span class="escondeLoginName">Login/Cadastrar</span></a></li>';
             }
             ?>
+            <!-- funçao para exixbir o menu -->
+            <script>
+                function mostrarMenu() {
+                    var menu = document.getElementById("menuCliente");
+                    if (menu.style.display === "block") {
+                        menu.style.display = "none";
+                    } else {
+                        menu.style.display = "block";
+                    }}
+            </script>
+            <!-- menu -->
+            <div id="menuCliente" style="display: none; border: 1px solid #000; border-radius: 8px;  font-size: small; padding: 2px; background-color: #2DA6A4">
+                <ul class="retiraNumeraLista">
+                    <li>Minha agenda</li>
+                    <li><a href="logout.php">Sair</a></li>
+                </ul>
+            </div>
         </ul>
     </nav>
     <br>
